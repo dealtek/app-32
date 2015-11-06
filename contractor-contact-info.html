@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Independent Drivers Consortium Contractor Info</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="inc/jq/themes/theme-02.min.css" />
+<link rel="stylesheet" href="inc/jq/themes/jquery.mobile.icons.min.css" />
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script>
+	$(function(){
+		$( "[data-role='header'], [data-role='footer']" ).toolbar();
+		});
+    </script>
+<style type="text/css">
+img.center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto
+}
+.box199 {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #06C;
+}
+</style>
+<style type="text/css">
+<!--
+.center1 {
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	text-align: center;
+}
+.box199 {
+	background-image: url(pics/stripes_teal_bkgrnd.gif);
+	height: 100%;
+	width: 100%;
+}
+.box2 {
+	background-image: url(pics/stripes_teal_bkgrnd.gif);
+}
+.bighead1 {
+	color: #000066;
+	font-weight: bold;
+	font-size: 18px;
+}
+.bigfont1 {
+	font-weight: bold;
+	font-size: 18px;
+}
+.bigfont2 {
+	font-weight: bold;
+	font-size: 18px;
+	text-align: center;
+	vertical-align: middle;
+	display: block;
+	height: 40px;
+	line-height: 40px;
+}
+.fgreen {
+	color: #090;
+}
+.fblue {
+	color: #03F;
+}
+-->
+</style>
+<style type="text/css">
+img.center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto
+}
+.box1 {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #06C;
+}
+</style>
+<style type="text/css">
+<!--
+body, td, th {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #333333;
+}
+.style8 {
+	color: #000066;
+	font-weight: bold;
+	font-size: 18px;
+}
+.style9 {
+	color: #000066;
+	font-weight: bold;
+	font-size: 14px;
+}
+-->
+</style>
+<link href="mob.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div data-role="header" data-position="fixed" data-theme="a">
+
+<div class="box1 center1 boxblue" >
+<a href="dashboard.html" rel="external"><img src="pics/appbanner-320x60-home1.png" width="320" height="61" class="center" ></a>
+</div>
+
+<!--
+<div class="box1"> <img class="center" src="pics/appbanner-320x60-main.png" ></div> -->
+
+<!--<h1>Page head Title</h1> --> 
+</div>
+<!-- /header -->
+
+<section id="page01" data-role="page"> 
+
+<div role="main" class="ui-content">
+<div class="content" >
+<div class="box1 center1" > 
+
+<!--INSERT START -->
+
+<table align="center" border="0" cellpadding="2" cellspacing="2"  background="pics/stripes_teal_bkgrnd.gif">
+<tr>
+<td width="315" height="40" align="center" valign="middle" bgcolor="#FFFFFF" class="print_data_16"><strong>CONTRACTOR INFO</strong>
+
+
+<a class="buttonlink2" rel="external" href="client-toc-edit.html">Add / Update Contractors</a>
+
+
+
+<h3> <span class="red1"><strong>
+<!-- where the response will be displayed -->
+<div id='response'></div>
+</strong></span>
+</h3>
+
+<!--<br><br><br>
+tmp code <div id='cl_emp_security_code'></div>
+ -->
+
+
+</td>
+</tr>
+
+
+<tr>
+<td valign="TOP" align="LEFT">
+
+
+
+
+<span class="print_data_16_gray">
+<strong>Primary Contractor:</strong></span>
+
+
+</td>
+</tr>
+<tr>
+<td align="LEFT" valign="TOP"><div align="left" class="print_data_22"> 
+
+
+<strong>
+
+
+<span id="cl_toc_CommonName"></span>
+
+</strong>
+
+ 
+
+(
+
+<span id="type_of_company_number"></span> )
+
+
+ </div></td>
+</tr>
+
+ 
+<tr id="divtoc0em">
+<td align="LEFT" valign="TOP">
+SEND EMAIL to Contractor: <strong></strong><br>
+<table border="0" cellspacing="2" cellpadding="2">
+<tr>
+<td>
+
+
+<form action="" method="post" name="thisform0cert" id="thisform0cert" >
+<input id="emtype" name="emtype" type="hidden" value="cert"  class="print_data_22" />
+
+<input id="test1" name="test1" type="hidden" value="10a"  class="print_data_22" />
+
+<input id="toc" name="toc" type="hidden" value=""  class="print_data_22" />
+
+<input id="emailaddress" name="emailaddress" type="hidden" value=""  class="print_data_22" />
+
+<input id="CommonName" name="CommonName" type="hidden" value=""  class="print_data_22" />
+
+<input id='send-email-cert' type="button" class="buttonform2_24" name="submit" value= "Email Certificate<br>of Enrollment form" onClick="testResults(this.form)" />
+</form>
+
+<!--REV DO SOON NEW OR RENEW CERT SOON!!!!!!!!! -->
+
+</td>
+<td valign="top">
+
+
+
+<form action="" method="post" name="thisform0test" id="thisform0test" >
+<input id="emtype" name="emtype" type="hidden" value="test"  class="print_data_22" />
+
+<input id="test1" name="test1" type="hidden" value="10b"  class="print_data_22" />
+
+
+<input id="toc" name="toc" type="hidden" value=""  class="print_data_22" />
+
+<input id="emailaddress" name="emailaddress" type="hidden" value=""  class="print_data_22" />
+
+<input id="CommonName" name="CommonName" type="hidden" value=""  class="print_data_22" />
+
+<input id='send-email-test' type="button" class="buttonform2_24" name="submit" value= "Email TEST<br>
+Results form" onClick="testResults(this.form)" />
+</form>
+
+ 
+
+
+</td>
+</tr>
+</table>
+</td>
+</tr> 
+
+
+
+
+<tr>
+<td align="LEFT" valign="TOP"></td>
+</tr>
+
+
+<tr>
+<td valign="TOP" align="LEFT">
+
+<!--<span class="print_data_20"></span> -->
+
+<span class="print_data_20">
+<span id="cl_toc_owner_contact_full_c"></span>
+</span>
+<strong></strong></td>
+</tr>
+
+
+
+<tr id="divcontractors">
+<td align="LEFT" valign="TOP"><br>
+<span class="print_data_16_gray">
+<strong>Additional Contractors:</strong>
+</span>
+
+</td>
+</tr>
+
+<!-- start toc1 -->
+
+
+<tr id="divtoc1a">
+<td align="LEFT" valign="TOP"><br>
+<div align="left" class="print_data_22"> 
+<br>
+<strong>
+<span id="cl_tocextra1_CommonName"></span>
+(<span id="tocNum1"></span>)
+</strong>
+</div>
+
+
+
+</td>
+</tr>
+
+
+<tr id="divtoc1em">
+<td align="LEFT" valign="TOP">
+
+SEND EMAIL to Contractor: <strong></strong><br>
+<table border="0" cellspacing="2" cellpadding="2">
+<tr>
+<td>
+
+
+<form action="" method="post" name="thisform1cert" id="thisform1cert" >
+<input id="emtype" name="emtype" type="hidden" value="cert"  class="print_data_22" />
+
+<input id="test1" name="test1" type="hidden" value="11a"  class="print_data_22" />
+
+<input id="toc" name="toc" type="hidden" value=""  class="print_data_22" />
+
+<input id="emailaddress" name="emailaddress" type="hidden" value=""  class="print_data_22" />
+
+<input id="CommonName" name="CommonName" type="hidden" value=""  class="print_data_22" />
+
+<input id='send-email-cert' type="button" class="buttonform2_24" name="submit" value= "Email Certificate<br>of Enrollment form" onClick="testResults(this.form)" />
+</form>
+
+</td>
+<td>
+
+<form action="" method="post" name="thisform1test" id="thisform1test" >
+<input id="emtype" name="emtype" type="hidden" value="test"  class="print_data_22" />
+
+<input id="test1" name="test1" type="hidden" value="11b"  class="print_data_22" />
+
+
+<input id="toc" name="toc" type="hidden" value=""  class="print_data_22" />
+
+<input id="emailaddress" name="emailaddress" type="hidden" value=""  class="print_data_22" />
+
+<input id="CommonName" name="CommonName" type="hidden" value=""  class="print_data_22" />
+
+<input id='send-email-test' type="button" class="buttonform2_24" name="submit" value= "Email Test <br>
+Results form" onClick="testResults(this.form)" />
+</form>
+
+
+</td>
+</tr>
+</table>
+
+</td>
+</tr>
+
+<tr id="divtoc1b">
+<td align="LEFT" valign="TOP"><span class="print_data_20"> 
+<span id="mgr1_contact_full_c"></span><br>
+</span>
+</td>
+</tr>
+
+
+<!-- start toc2 -->
+
+
+<tr id="divtoc2a">
+<td align="LEFT" valign="TOP"><br>
+<div align="left" class="print_data_22">
+<br>
+<strong>
+<span id="cl_tocextra2_CommonName"></span>
+ (<span id="tocNum2"></span>)<br>
+</div>
+</td>
+</tr>
+
+
+
+ 
+<tr id="divtoc2em">
+<td align="LEFT" valign="TOP">
+SEND EMAIL to Contractor: <strong></strong><br>
+<table border="0" cellspacing="2" cellpadding="2">
+<tr>
+<td>
+
+
+<form action="" method="post" name="thisform2cert" id="thisform2cert" >
+<input id="emtype" name="emtype" type="hidden" value="cert"  class="print_data_22" />
+
+<input id="test1" name="test1" type="hidden" value="12a"  class="print_data_22" />
+
+<input id="toc" name="toc" type="hidden" value=""  class="print_data_22" />
+
+<input id="emailaddress" name="emailaddress" type="hidden" value=""  class="print_data_22" />
+
+<input id="CommonName" name="CommonName" type="hidden" value=""  class="print_data_22" />
+
+<input id='send-email-cert' type="button" class="buttonform2_24" name="submit" value= "Email Certificate<br>of Enrollment form" onClick="testResults(this.form)" />
+</form>
+
+</td>
+<td>
+
+
+<form action="" method="post" name="thisform2test" id="thisform2test" >
+<input id="emtype" name="emtype" type="hidden" value="test"  class="print_data_22" />
+
+<input id="test1" name="test1" type="hidden" value="12b"  class="print_data_22" />
+
+
+<input id="toc" name="toc" type="hidden" value=""  class="print_data_22" />
+
+<input id="emailaddress" name="emailaddress" type="hidden" value=""  class="print_data_22" />
+
+<input id="CommonName" name="CommonName" type="hidden" value=""  class="print_data_22" />
+
+<input id='send-email-test' type="button" class="buttonform2_24" name="submit" value= "Email Test <br>
+Results form" onClick="testResults(this.form)" />
+</form>
+
+
+</td>
+</tr>
+</table>
+</td>
+</tr>
+
+
+
+
+<tr id="divtoc2b">
+<td align="LEFT" valign="TOP"><span class="print_data_20">
+
+<span id="mgr2_contact_full_c"></span><br>
+</span>
+
+</td>
+</tr>
+
+<!-- start toc3 -->
+
+<tr id="divtoc3a">
+<td align="LEFT" valign="TOP"><br>
+<div align="left" class="print_data_22">
+<br>
+<strong>
+<span id="cl_tocextra3_CommonName"></span>
+ (<span id="tocNum3"></span>)<br>
+ </div>
+
+</td>
+</tr>
+
+
+<tr id="divtoc3em">
+<td align="LEFT" valign="TOP">
+SEND EMAIL to Contractor: <strong></strong><br>
+<table border="0" cellspacing="2" cellpadding="2">
+<tr>
+<td>
+
+
+<form action="" method="post" name="thisform3cert" id="thisform3cert" >
+<input id="emtype" name="emtype" type="hidden" value="cert"  class="print_data_22" />
+
+<input id="test1" name="test1" type="hidden" value="13a"  class="print_data_22" />
+
+<input id="toc" name="toc" type="hidden" value=""  class="print_data_22" />
+
+<input id="emailaddress" name="emailaddress" type="hidden" value=""  class="print_data_22" />
+
+<input id="CommonName" name="CommonName" type="hidden" value=""  class="print_data_22" />
+
+<input id='send-email-cert' type="button" class="buttonform2_24" name="submit" value= "Email Certificate<br>of Enrollment form" onClick="testResults(this.form)" />
+</form>
+
+</td>
+<td>
+
+
+<form action="" method="post" name="thisform3test" id="thisform3test" >
+<input id="emtype" name="emtype" type="hidden" value="test"  class="print_data_22" />
+
+<input id="test1" name="test1" type="hidden" value="13b"  class="print_data_22" />
+
+
+<input id="toc" name="toc" type="hidden" value=""  class="print_data_22" />
+
+<input id="emailaddress" name="emailaddress" type="hidden" value=""  class="print_data_22" />
+
+<input id="CommonName" name="CommonName" type="hidden" value=""  class="print_data_22" />
+
+<input id='send-email-test' type="button" class="buttonform2_24" name="submit" value= "Email Test <br>
+Results form" onClick="testResults(this.form)" />
+</form>
+
+
+</td>
+</tr>
+</table>
+</td>
+</tr>
+
+
+<tr id="divtoc3b">
+<td align="LEFT" valign="TOP"><span class="print_data_20">
+
+<span id="mgr3_contact_full_c"></span><br>
+
+</span>
+
+</td>
+</tr>
+
+
+
+
+<tr>
+<td align="LEFT" valign="TOP"><span class="print_data_22"><br>
+
+
+<strong>Send Email to Anyone:</strong></span><br>
+
+</td>
+</tr>
+
+
+<tr id="divanyone">
+<td align="LEFT" valign="TOP">
+<!--SEND EMAIL TO ANYONE: <strong></strong><br> -->
+<table border="0" cellspacing="2" cellpadding="2">
+<tr>
+<td>
+
+
+<form action="" method="post" name="thisform99cert" id="thisform99cert" >
+<input id="emtype" name="emtype" type="hidden" value="cert"  class="print_data_22" />
+
+<input id="test1" name="test1" type="hidden" value="00a"  class="print_data_22" />
+
+
+<input id="toc" name="toc" type="hidden" value=""  class="print_data_22" /> 
+
+<!--EMAIL:  --><span class="print_data_22" id="emtest1"></span>
+
+<script>
+if (localStorage.getItem("anyone_email1") == ""){
+document.getElementById('emtest1').innerHTML = "ENTER EMAIL ABOVE";
+}
+</script>
+
+<input id="emailaddress" name="emailaddress" type="hidden" value=""  class="print_data_22" />
+
+<input id="CommonName" name="CommonName" type="hidden" value=""  class="print_data_22" /> 
+
+<input id='send-email-cert' type="button" class="buttonform2_24" name="submit" value= "Email Certificate<br>of Enrollment form" onClick="testResults(this.form)" />
+</form>
+
+
+</td>
+<td>
+
+<form action="" method="post" name="thisform99test" id="thisform99test" >
+<input id="emtype" name="emtype" type="hidden" value="test"  class="print_data_22" />
+
+<input id="test1" name="test1" type="hidden" value="00b"  class="print_data_22" />
+
+
+
+<input id="toc" name="toc" type="hidden" value=""  class="print_data_22" />
+
+<!--EMAIL:  --><span class="print_data_22" id="emtest2"></span>
+
+<script>
+if (localStorage.getItem("anyone_email1") == ""){
+document.getElementById('emtest2').innerHTML = "ENTER EMAIL ABOVE";
+}
+</script>
+
+
+<input id="emailaddress" name="emailaddress" type="hidden" value=""  class="print_data_22" />
+
+
+<input id="CommonName" name="CommonName" type="hidden" value=""  class="print_data_22" />
+
+<input id='send-email-test' type="button" class="buttonform2_24" name="submit" value= "Email Test <br>
+Results form" onClick="testResults(this.form)" />
+</form>
+
+
+
+</td>
+</tr>
+</table>
+
+
+
+</td>
+</tr>
+
+
+
+
+
+
+
+
+
+<tr>
+<td align="LEFT" valign="TOP">
+<!--<span class="print_data_22"><br><strong>Send Email to Anyone:</strong><br></span> -->
+
+<form action="" method="post" name="thisform_anyemail" id="thisform_anyemail" >
+
+
+<table border="0" cellspacing="2" cellpadding="2">
+<tr>
+
+<td valign="bottom">Enter Email Address: <input id="anyemailaddress" name="anyemailaddress" type="text" value=""  class="print_data_22" /></td>
+<td valign="bottom"><input id='send-email-cert' type="button" class="buttonform2_24" name="submit" value= "Add Email" onClick="testResults(this.form)" />
+
+<input id="emtype" name="emtype" type="hidden" value="anyone"  class="print_data_22" />
+
+<input id="test1" name="test1" type="hidden" value="00a"  class="print_data_22" />
+<input id="toc" name="toc" type="hidden" value="0"  class="print_data_22" /> 
+<input id="CommonName" name="CommonName" type="hidden" value=""  class="print_data_22" /> 
+
+</td>
+</tr>
+</table>
+
+
+
+
+</form>
+
+
+</td>
+</tr>
+
+
+
+
+
+
+
+
+
+</table><!--end big table -->
+<br>
+
+
+
+
+
+<script>
+
+
+//tmp this code
+//document.getElementById('cl_emp_security_code').textContent = localStorage.getItem("cl_emp_security_code");
+
+document.getElementById('cl_toc_CommonName').textContent = localStorage.getItem("cl_toc_CommonName");
+document.getElementById('type_of_company_number').textContent = localStorage.getItem("type_of_company_number");
+
+
+//document.getElementById('cl_emp_security_code').textContent = localStorage.getItem("cl_emp_security_code");
+
+
+
+//document.getElementById('cl_toc_owner_email_Confidential_Email').textContent = localStorage.getItem("cl_toc_owner_email_Confidential_Email");
+document.getElementById('cl_toc_owner_contact_full_c').textContent = localStorage.getItem("cl_toc_owner_contact_full_c");
+document.getElementById('tocNum1').textContent = localStorage.getItem("tocNum1");
+
+document.getElementById('tocNum2').textContent = localStorage.getItem("tocNum2");
+
+document.getElementById('tocNum3').textContent = localStorage.getItem("tocNum3");
+
+//document.getElementById('tocNum4').textContent = localStorage.getItem("tocNum4");
+
+//document.getElementById('tocNum5').textContent = localStorage.getItem("tocNum5");
+
+document.getElementById('cl_tocextra1_CommonName').textContent = localStorage.getItem("cl_tocextra1_CommonName");
+document.getElementById('cl_tocextra2_CommonName').textContent = localStorage.getItem("cl_tocextra2_CommonName");
+document.getElementById('cl_tocextra3_CommonName').textContent = localStorage.getItem("cl_tocextra3_CommonName");
+//document.getElementById('mgr1_email_Confidential_Email').textContent = localStorage.getItem("mgr1_email_Confidential_Email");
+//document.getElementById('mgr2_email_Confidential_Email').textContent = localStorage.getItem("mgr2_email_Confidential_Email");
+//document.getElementById('mgr3_email_Confidential_Email').textContent = localStorage.getItem("mgr3_email_Confidential_Email");
+
+// make show returns
+document.getElementById('mgr1_contact_full_c').innerHTML = localStorage.getItem("mgr1_contact_full_c");
+document.getElementById('mgr2_contact_full_c').innerHTML = localStorage.getItem("mgr2_contact_full_c");
+document.getElementById('mgr3_contact_full_c').innerHTML = localStorage.getItem("mgr3_contact_full_c");
+
+
+</script>
+
+
+<script>
+//pre populate FORMS main
+
+// form 0
+document.thisform0cert.emailaddress.value=localStorage.getItem("cl_toc_owner_email_Confidential_Email");
+document.thisform0cert.CommonName.value=localStorage.getItem("cl_toc_CommonName");
+document.thisform0cert.toc.value=localStorage.getItem("type_of_company_number");
+
+document.thisform0test.emailaddress.value=localStorage.getItem("cl_toc_owner_email_Confidential_Email");
+document.thisform0test.CommonName.value="otototo" + localStorage.getItem("cl_toc_CommonName");
+document.thisform0test.toc.value=localStorage.getItem("type_of_company_number");
+
+// extra 1
+
+document.thisform1cert.emailaddress.value=localStorage.getItem("mgr1_email_Confidential_Email");
+document.thisform1cert.CommonName.value=localStorage.getItem("cl_tocextra1_CommonName");
+document.thisform1cert.toc.value=localStorage.getItem("tocNum1");
+
+document.thisform1test.emailaddress.value=localStorage.getItem("mgr1_email_Confidential_Email");
+document.thisform1test.CommonName.value="otototo" + localStorage.getItem("cl_tocextra1_CommonName");
+document.thisform1test.toc.value=localStorage.getItem("tocNum1");
+
+//2
+
+document.thisform2cert.emailaddress.value=localStorage.getItem("mgr2_email_Confidential_Email");
+document.thisform2cert.CommonName.value=localStorage.getItem("cl_tocextra2_CommonName");
+document.thisform2cert.toc.value=localStorage.getItem("tocNum2");
+
+document.thisform2test.emailaddress.value=localStorage.getItem("mgr2_email_Confidential_Email");
+document.thisform2test.CommonName.value=localStorage.getItem("cl_tocextra2_CommonName");
+document.thisform2test.toc.value=localStorage.getItem("tocNum2");
+
+//3
+
+document.thisform3cert.emailaddress.value=localStorage.getItem("mgr3_email_Confidential_Email");
+document.thisform3cert.CommonName.value=localStorage.getItem("cl_tocextra3_CommonName");
+document.thisform3cert.toc.value=localStorage.getItem("tocNum3");
+
+document.thisform3test.emailaddress.value=localStorage.getItem("mgr3_email_Confidential_Email");
+document.thisform3test.CommonName.value=localStorage.getItem("cl_tocextra3_CommonName");
+document.thisform3test.toc.value=localStorage.getItem("tocNum3");
+/**/
+
+//anyone
+
+//just the field in anyone form
+
+if (localStorage.getItem("anyone_email1") == null){
+localStorage.setItem("anyone_email1", "");
+}
+
+document.thisform_anyemail.anyemailaddress.value=localStorage.getItem("anyone_email1");
+
+
+document.thisform99cert.emailaddress.value=localStorage.getItem("anyone_email1");
+document.thisform99cert.CommonName.value='';
+document.thisform99cert.toc.value='0';
+//document.thisform99cert.CommonName.value=localStorage.getItem("cl_tocextra5_CommonName");
+//document.thisform99cert.toc.value=localStorage.getItem("tocNum5");
+
+document.thisform99test.emailaddress.value=localStorage.getItem("anyone_email1");
+document.thisform99test.CommonName.value="";
+document.thisform99test.toc.value="0";
+//document.thisform99test.CommonName.value="otototo" + localStorage.getItem("cl_tocextra5_CommonName");
+//document.thisform99test.toc.value=localStorage.getItem("tocNum5");
+
+
+
+
+
+
+
+//4
+/*
+document.thisform4cert.emailaddress.value=localStorage.getItem("mgr4_email_Confidential_Email");
+document.thisform4cert.CommonName.value=localStorage.getItem("cl_tocextra4_CommonName");
+document.thisform4cert.toc.value=localStorage.getItem("tocNum4");
+
+document.thisform4test.emailaddress.value=localStorage.getItem("mgr4_email_Confidential_Email");
+document.thisform4test.CommonName.value="otototo" + localStorage.getItem("cl_tocextra4_CommonName");
+document.thisform4test.toc.value=localStorage.getItem("tocNum4");
+*/
+//5
+
+/*
+document.thisform5cert.emailaddress.value=localStorage.getItem("mgr5_email_Confidential_Email");
+document.thisform5cert.CommonName.value=localStorage.getItem("cl_tocextra5_CommonName");
+document.thisform5cert.toc.value=localStorage.getItem("tocNum5");
+
+document.thisform5test.emailaddress.value=localStorage.getItem("mgr5_email_Confidential_Email");
+document.thisform5test.CommonName.value="otototo" + localStorage.getItem("cl_tocextra5_CommonName");
+document.thisform5test.toc.value=localStorage.getItem("tocNum5");
+*/
+
+
+
+/*
+document.thisform.xxx.value=localStorage.getItem("xxx");
+document.thisform.xxx.value=localStorage.getItem("xxx");
+document.thisform.xxx.value=localStorage.getItem("xxx");
+document.thisform.xxx.value=localStorage.getItem("xxx");
+document.thisform.xxx.value=localStorage.getItem("xxx");
+document.thisform.xxx.value=localStorage.getItem("xxx");
+document.thisform.xxx.value=localStorage.getItem("xxx");
+document.thisform.xxx.value=localStorage.getItem("xxx");
+document.thisform.xxx.value=localStorage.getItem("xxx");
+*/
+//form fill
+
+//recipient1: localStorage.getItem("cl_toc_owner_email_Confidential_Email"),
+
+</script>
+
+
+
+
+<script>
+
+function testResults (form) {
+	
+	
+if (form.emtype.value == 'cert'){
+var goto = "https://idcapp.com/app-data/em-send-cert.php"
+}else if (form.emtype.value == 'anyone'){
+localStorage.setItem("anyone_email1", form.anyemailaddress.value);
+document.thisform99cert.emailaddress.value=localStorage.getItem("anyone_email1");
+document.thisform99test.emailaddress.value=localStorage.getItem("anyone_email1");
+
+
+
+if (localStorage.getItem("anyone_email1") != ""){
+document.getElementById('emtest1').innerHTML = "";
+document.getElementById('emtest2').innerHTML = "";
+
+$("#divanyone").show(1000);
+
+}else{
+	
+document.getElementById('emtest1').innerHTML = "ENTER EMAIL ABOVE";
+document.getElementById('emtest2').innerHTML = "ENTER EMAIL ABOVE";	
+
+$("#divanyone").hide(1000);
+
+	}
+var goto = "nowhere"
+	}else{		
+var goto = "https://idcapp.com/app-data/em-send-test-results.php"		
+}
+
+
+
+
+if (goto != 'nowhere'){
+
+
+
+
+//var g7g  = "https://idcapp.com/app-data/client-update-ztmp.php";
+	
+    //var Client_ID  = form.Client_ID.value;
+	// alert ("You typed: " + Client_ID +" " +webpass);
+
+//localStorage.setItem("test1", form.test1.value);
+
+// start post	
+	
+// show that something is loading
+		$('#response').html("<b>Loading response...</b>");
+		
+		/*
+		 * 'post_receiver.php' - where you will pass the form data
+		 * $(this).serialize() - to easily read form data
+		 * function(data){... - data contains the response from post_receiver.php
+		 */
+//client-update-contact.php	- client-update-ztmp.php
+
+
+//var g7g  = "https://idcapp.com/app-data/client-update-ztmp.php";
+
+	 
+//$.post('https://idcapp.com/app-data/client-update-ztmp.php', {	
+
+$.post(goto, {			
+
+emtype: form.emtype.value,
+cl_toc_CommonName: form.CommonName.value,
+recipient1: form.emailaddress.value,
+//recipient1: localStorage.getItem("cl_toc_owner_email_Confidential_Email"),
+type_of_company_number: form.toc.value,
+
+//type_of_company_number: localStorage.getItem("type_of_company_number"),
+
+//
+now_co: localStorage.getItem("Company"),
+//empcode: 'yum1',
+//nowuser: 'yum1',
+
+Company: localStorage.getItem("Company"),
+goto: goto,
+//test1: localStorage.getItem("test1"),
+test1: form.test1.value,
+//cl_toc_CommonName: localStorage.getItem("cl_toc_CommonName"),
+//recipient1: "bob@bob.com",
+
+Client_ID: localStorage.getItem("Client_ID"),
+
+cl_emp_security_code: localStorage.getItem("cl_emp_security_code"),
+
+//what about these from client
+email_Confidential_Email: localStorage.getItem("email_Confidential_Email"),
+email_Agency: localStorage.getItem("email_Confidential_Email"),
+
+	
+}, function(data){
+// show the response
+$('#response').html(data);
+//$('#response2').html(data);
+}).fail(function() {
+// just in case posting your form failed
+alert( "Posting failed." );
+});
+// to prevent refreshing the whole page page
+return false;
+//window.location.replace("new-client-application-register3.html");
+}
+
+		 }// end if goto nowhere
+
+</script>
+
+
+
+
+
+
+<script>
+
+//start hide-show
+
+if (
+localStorage.getItem("tocNum1") < 1 &&
+localStorage.getItem("tocNum2") < 1 &&
+localStorage.getItem("tocNum3") < 1 &&
+localStorage.getItem("tocNum4") < 1 &&
+localStorage.getItem("tocNum5") < 1 
+){
+$("#divcontractors").hide();
+//alert("hide1")
+}else{
+$("#divcontractors").show();	
+//alert("show1")
+}
+
+
+if (localStorage.getItem("tocNum1") < 1){
+$("#divtoc1a").hide();
+$("#divtoc1b").hide();
+//alert("hide1")
+}
+
+if (localStorage.getItem("tocNum2") < 1){
+$("#divtoc2a").hide();
+$("#divtoc2b").hide();
+//alert("hide2")
+}
+
+if (localStorage.getItem("tocNum3") < 1){
+$("#divtoc3a").hide();
+$("#divtoc3b").hide();
+
+//alert("hide3")
+}
+
+
+// add or null?
+
+if (localStorage.getItem("cl_toc_owner_email_Confidential_Email") == ""){
+$("#divtoc0em").hide();
+}
+
+if (localStorage.getItem("mgr1_email_Confidential_Email") == ""){
+$("#divtoc1em").hide();
+}
+if (localStorage.getItem("mgr2_email_Confidential_Email") == ""){
+$("#divtoc2em").hide();
+}
+if (localStorage.getItem("mgr3_email_Confidential_Email") == ""){
+$("#divtoc3em").hide();
+}
+
+if (localStorage.getItem("anyone_email1") == ""){
+$("#divanyone").hide();
+}
+
+//end hide
+</script>
+
+<!--INSERT END --> 
+
+</div>
+<!-- end .box --> 
+
+<!-- end .content --></div>
+</div>
+<!-- /ui-content --> 
+
+</section>
+<!-- /page -->
+
+<footer data-role="footer" class="ui-barNAH" data-position="fixed" data-theme="a">
+<div class="ui-grid-c boxblue">
+<!--foot -->
+</div>
+</footer>
+
+
+
+<!-- /footer -->
+
+</body>
+</html>
+
+
+<!-- code for including header/footer -->
+    <script type="text/javascript">
+      
+      // we're ready, include away
+      $(window).ready(function(){
+        
+        // use easy AJAX jQuery helpers
+        
+		// header no work!!!!
+        // add header.html into <header>
+        $.get("header-inc.html", function(fileData){
+          $('header').html(fileData); 
+        });
+
+        // add footer.html into <footer>
+        $.get("footer-inc.html", function(fileData){
+          $('footer').html(fileData); 
+        });
+       
+	 /*   */
+	   
+	   
+      });
+      
+    </script>

@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Independent Drivers Consortium - Reg 1</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+<link rel="stylesheet" href="inc/jq/themes/theme-02.min.css" />
+<link rel="stylesheet" href="inc/jq/themes/jquery.mobile.icons.min.css" />
+
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+ <script>
+	$(function(){
+		$( "[data-role='header'], [data-role='footer']" ).toolbar();
+		});
+    </script>
+
+<script src="inc/jq/validate/dist/jquery.validate.js"></script>
+
+<link href="mob.css" rel="stylesheet" type="text/css" />
+
+
+
+<style type="text/css">
+
+input999
+{
+	-moz-border-radius: 11px;
+	border-radius: 11px;
+	border: 1px solid #CCC;
+	padding: .2em;
+ 	margin: .2em 0;
+	
+}
+
+.label_16g999 {
+	color: #999999;
+	font-size: 16px;
+}
+
+.big24999 {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #FFF;
+	background-color: #6290ee;
+	font-size: 24px;
+}
+
+</style>
+
+
+  
+</head>
+<body>
+
+<div data-role="header" data-position="fixed" data-theme="a">
+<div class="box1" center1>
+<img class="center" src="pics/appbanner-320x60-main.png" ></div>
+<!--<h1>Page head Title</h1> -->
+</div><!-- /header -->
+
+<section id="page1" data-role="page">
+    
+<!--	
+<div class="box1 center1" >this box fill all<br><br>
+<br>
+</div> 
+-->
+
+<div role="main" class="ui-content">
+<div class="content" >
+<div class="box1 center1" >
+  
+      
+<!--INSERT START -->
+  
+<!--
+<form action="new-client-application-register2_newrec.php" method="post" name="thisform" id="thisform" > -->
+
+<form action="" method="post" name="thisform" id="thisform" >
+
+
+
+
+<table border="0" align="center" cellpadding="2" cellspacing="2">
+  <tr>
+    <td>
+   
+
+    
+    </td>
+  </tr>
+  <tr>
+    <td align="left" valign="top">
+ 
+    
+  <!--  
+     <span class="red2">*</span>  <span class="label_16g">First Name:<br>
+</span><div id='thisform_firstname_errorloc' class="error_strings"></div>
+
+  -->
+<div data-role="ui-field-contain">
+<label class="label_16g" for="firstname"><span class="red2">*</span> First Name:</label>
+
+<input name="firstname" id="firstname" type="text" class="print_data_22" value=""  required minlength="1" />
+</div>
+
+     
+      </td>
+  </tr>
+  <tr>
+    <td align="left" valign="top">
+    
+    
+    
+    
+    <!--<span class="red2">*</span> <span class="label_16g">Last Name:<br>
+</span>
+<div id='thisform_lastname_errorloc' class="error_strings"></div>
+ -->
+
+
+<div data-role="ui-field-contain">
+<label class="label_16g" for="lastname"><span class="red2">*</span> Last Name:</label>
+
+
+<input id="lastname" name="lastname" type="text" class="print_data_22" value="" required minlength="2">
+</div>
+
+
+</td>
+  </tr>
+  <tr>
+    <td align="left" valign="top">
+    
+    
+    <!--<span class="red2">*</span> <span class="label_16g">Social Security Number: (optional)<br>
+</span>
+
+<div id='thisform_socialsecnum_errorloc' class="error_strings"></div>
+
+ -->
+
+
+<div data-role="ui-field-contain">
+<label class="label_16g" for="socialsecnum"><span class="red2">*</span> Social Security Number:</label>
+
+<input name="socialsecnum" id="socialsecnum" type="text" class="print_data_22" value=""  required minlength="1" />
+</div>
+
+</td>
+  </tr>
+  
+ 
+  
+  
+  <tr>
+    <td align="left" valign="top">
+    
+    <!--
+    <span class="red2">*</span> <span class="label_18g">Cellphone:<br>
+</span>
+<div id='thisform_cellphone_errorloc' class="error_strings"></div>
+
+
+ -->
+<div data-role="ui-field-contain">
+<label class="label_16g" for="cellphone"><span class="red2">*</span> Cellphone:</label>
+
+<input name="cellphone" id="cellphone" type="text" class="print_data_22" value=""  required minlength="1" />
+</div>
+<!--
+<input id="cellphone" name="cellphone" type="text" value="" class="print_data_22">
+ -->
+
+
+
+</td>
+  </tr>
+  
+  
+  
+   
+
+    
+  
+  
+<tr align="left" valign="top">
+     <td align="left"><span class="label_18g">
+       
+       
+       
+       <!--<span class="red2">*</span> Driver's License Number:<br />
+ 
+       
+       </span>
+       <div id='thisform_driverslicense_errorloc' class="error_strings"></div> -->
+       <span class="print_data_22">
+       
+      <div data-role="ui-field-contain">
+<label class="label_16g" for="driverslicense"><span class="red2">*</span> Driver's License Number:</label>
+
+<input name="driverslicense" id="driverslicense" type="text" class="print_data_22" value=""  required minlength="5" />
+</div> 
+       <!-- <input id="driverslicense" name="driverslicense" type="text" value=""  class="print_data_22" />  -->
+        
+ </span></td>
+  </tr>  
+
+  
+<tr align="left" valign="top">
+     <td align="left"><span class="label_18g">
+       
+       <!--<span class="red2">*</span> Email Address:<br /></span>
+       <div id='thisform_email_errorloc' class="error_strings"></div>
+       -->
+      <div data-role="ui-field-contain">
+<label class="label_16g" for="email"><span class="red2">*</span> Email Address:</label>
+
+<input name="email" id="email" type="email" class="print_data_22" value=""  required minlength="1" />
+</div>
+
+
+      
+       <span class="print_data_22">
+ 
+ </span></td>
+ 
+  </tr>  
+  
+  
+  
+<tr align="left" valign="top">
+     <td align="left"><span class="label_18g">
+       
+       
+       
+       <!--<span class="red2">*</span> CA PUC Number: (optional)<br /></span>
+       <div id='thisform_email_errorloc' class="error_strings"></div>
+        -->
+       
+       
+       <div data-role="ui-field-contain">
+<label class="label_16g" for="PUC_Number"><!--<span class="red2">*</span> --> CA PUC Number: (optional):</label>
+
+<input name="PUC_Number" id="PUC_Number" type="text" class="print_data_22" value=""  />
+</div>
+       
+      <!-- <span class="print_data_22">
+       <input name="PUC_Number" type="text" value=""  class="print_data_22" /> -->
+        
+ </span></td>
+ 
+  </tr>  
+ 
+ 
+ 
+ 
+   <tr>
+    <td align="left" valign="top">
+      
+ <input data-role="submit" type="submit" value=" - Continue - ">
+<!--
+<input type="button" class="buttonform2_24" name="submit" value= " - Continue - " onClick="testResults(this.form)" />
+ -->
+
+      
+      
+      
+      
+      
+       </td>
+    </tr>
+  
+  
+  
+  <tr>
+    <td>
+    
+    
+   
+    <!--HIDDEN -->
+      
+   
+      
+</td>
+  </tr>
+  
+</table>
+
+
+</form>
+
+
+<script>
+
+$("#page1").on("pageinit", function() {
+        //alert ("test1");
+		
+        $("form").validate({
+            
+rules: {
+                Client_ID99: {
+                    required: true
+                },
+                webpass99: {
+                    required: true
+                }
+            },
+            errorPlacement: function(error, element) {
+                //error.insertAfter(element.parent());
+				error.insertBefore(element.parent());
+
+                //alert ("test2");
+            },
+			
+submitHandler: function(form) {
+        //code that should happen after validation if no errors are found goes here
+        
+//        alert ("success");
+
+//lotsssssssssss
+
+
+localStorage.setItem("done1", "YO12221");
+localStorage.setItem("firstname", form.firstname.value);
+
+localStorage.setItem("lastname", form.lastname.value);
+localStorage.setItem("socialsecnum", form.socialsecnum.value);
+localStorage.setItem("cellphone", form.cellphone.value);
+localStorage.setItem("driverslicense", form.driverslicense.value);
+localStorage.setItem("password", form.driverslicense.value);
+localStorage.setItem("email", form.email.value);
+localStorage.setItem("PUC_Number", form.PUC_Number.value);
+
+
+//
+window.location.replace("new-client-application-register3.html");
+		
+
+	
+		        
+ },
+	
+});
+ 
+}
+
+);
+
+</script>
+
+
+
+
+
+<script>
+//pre populate
+
+// just from page 1
+
+document.thisform.firstname.value=localStorage.getItem("firstname");
+document.thisform.lastname.value=localStorage.getItem("lastname");
+document.thisform.socialsecnum.value=localStorage.getItem("socialsecnum");
+document.thisform.cellphone.value=localStorage.getItem("cellphone");
+document.thisform.driverslicense.value=localStorage.getItem("driverslicense");
+document.thisform.email.value=localStorage.getItem("email");
+document.thisform.PUC_Number.value=localStorage.getItem("PUC_Number");
+
+</script>
+
+
+<!--INSERT END -->
+
+</div><!-- end .box -->
+</div><!-- end .content -->
+</div><!-- /ui-content -->
+  
+</section><!-- /page -->
+<!--
+<footer data-role="footer" class="ui-barNAH" data-position="fixed" data-theme="a">
+<div class="ui-grid-c boxblue">
+foot
+</div>
+</footer> -->
+
+<!-- /footer -->
+
+</body>
+</html>

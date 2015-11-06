@@ -1,0 +1,201 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Independent Drivers Consortium - Reg 1</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+<link rel="stylesheet" href="inc/jq/themes/theme-02.min.css" />
+<link rel="stylesheet" href="inc/jq/themes/jquery.mobile.icons.min.css" />
+
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+ <script>
+	$(function(){
+		$( "[data-role='header'], [data-role='footer']" ).toolbar();
+		});
+    </script>
+
+<link href="mob.css" rel="stylesheet" type="text/css" />
+
+
+<style type="text/css" xml:space="preserve">
+BODY, P,TD{ font-family: Arial,Verdana,Helvetica, sans-serif; font-size: 10pt }
+A{font-family: Arial,Verdana,Helvetica, sans-serif;}
+B {	font-family : Arial, Helvetica, sans-serif;	font-size : 12px;	font-weight : bold;}
+.error_strings{ font-family:Verdana; font-size:14px; color:#F00; }
+</style><script language="JavaScript" src="../admin/inc/gen_validatorv4.js"
+type="text/javascript" xml:space="preserve"></script>
+
+
+
+<style type="text/css">
+
+input999
+{
+	-moz-border-radius: 11px;
+	border-radius: 11px;
+	border: 1px solid #CCC;
+	padding: .2em;
+ 	margin: .2em 0;
+	
+}
+
+.label_16g999 {
+	color: #999999;
+	font-size: 16px;
+}
+
+.big24999 {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #FFF;
+	background-color: #6290ee;
+	font-size: 24px;
+}
+
+</style>
+
+
+  
+</head>
+<body>
+
+<div data-role="header" data-position="fixed" data-theme="a">
+
+
+
+<div class="box1 center1 boxblue" >
+<a href="dashboard.html" rel="external"><img src="pics/appbanner-320x60-home1.png" width="320" height="61" class="center" ></a>
+</div>
+
+
+
+<!--<h1>Page head Title</h1> -->
+</div><!-- /header -->
+
+<section id="page1" data-role="page">
+
+<div role="main" class="ui-content">
+<div class="content" >
+<div class="box1 center1" >
+  
+      
+<!--INSERT START -->
+
+<a rel="external" href="dashboard.html" class="buttonlink2 center1">return</a> <br>
+
+
+<span class="print_data_22">
+
+<h1> <span class="green1"><strong>
+     <!-- where the response will be displayed -->
+<div id='response'></div>
+</strong></span>
+</h1>
+
+</span>
+
+
+<script>
+
+//function testResults (form) {
+
+$(document).ready(function(){	
+	
+    //var Client_ID  = form.Client_ID.value;
+	
+   // alert ("You typed: " + Client_ID +" " +webpass);
+
+
+//localStorage.setItem("PUC_Number", form.PUC_Number.value);
+
+// start post	
+	
+// show that something is loading
+		$('#response').html("<b>Checking Tests at IDC...</b>");
+		
+		/*
+		 * 'post_receiver.php' - where you will pass the form data
+		 * $(this).serialize() - to easily read form data
+		 * function(data){... - data contains the response from post_receiver.php
+		 */
+//client-update-contact.php	- client-update-ztmp.php
+
+//alert( "" + localStorage.getItem("Client_ID"));
+	 
+$.post('https://idcapp.com/app-data/random-tests-completecheck.php', {			 
+
+Client_ID: localStorage.getItem("Client_ID"),
+
+//PUC_Number: localStorage.getItem("PUC_Number"),
+		
+}, function(data){
+			
+			// show the response
+			$('#response').html(data);
+			//alert( "Posting yo." + localStorage.getItem("PUC_Number"));
+			
+			//alert( "b4" + data);
+			var datatrm = data.trim();
+			//alert( "bedda" + datatrm);
+
+// !!!! SIMPLIFY SOON - found crap in repsonse hidden char so need trim for now
+	
+var checkit1 = data.trim();	
+var xyes = checkit1.indexOf("yestest");	
+	
+if (xyes > -1 ){		
+// so it exists
+//alert( "yeees22");	
+localStorage.setItem("rt_completecheck", data.trim());
+}else{
+//
+//alert( "no22");
+//alert( "no need for a test at this time");	
+localStorage.setItem("rt_completecheck", "");	
+}
+							
+			//$('#response2').html(data);
+			//
+			window.location.replace("dashboard.html");
+		}).fail(function() {
+		
+			// just in case posting your form failed
+			alert( "Posting failed." );
+			
+		});
+
+		// to prevent refreshing the whole page page
+		return false;
+
+
+
+//
+})
+</script>
+
+
+
+
+<!--INSERT END -->
+
+</div><!-- end .box -->
+</div><!-- end .content -->
+</div><!-- /ui-content -->
+  
+</section><!-- /page -->
+<!--
+<footer data-role="footer" class="ui-barNAH" data-position="fixed" data-theme="a">
+<div class="ui-grid-c boxblue">
+foot
+</div>
+</footer> -->
+
+<!-- /footer -->
+
+</body>
+</html>

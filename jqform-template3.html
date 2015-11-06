@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+  
+  
+ 
+<title>Independent Drivers Consortium client local store</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+
+<link rel="stylesheet" href="inc/jq/themes/theme-02.min.css" />
+<link rel="stylesheet" href="inc/jq/themes/jquery.mobile.icons.min.css" />
+
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+<script>
+	$(function(){
+		$( "[data-role='header'], [data-role='footer']" ).toolbar();
+		});
+    </script>
+
+
+
+<link href="mob.css" rel="stylesheet" type="text/css" />
+
+<script src="inc/jq/validate/dist/jquery.validate.js"></script>
+
+
+
+<!--nah -->
+
+	<style>
+	label.error {
+		color: red;
+		font-size: 16px;
+		font-weight: normal;
+		line-height: 1.4;
+		margin-top: 0.5em;
+		width: 100%;
+		float: none;
+		background-color: #9C6;
+	}
+	@media screen and (orientation: portrait) {
+		label.error {
+			margin-left: 0;
+			display: block;
+		}
+	}
+	@media screen and (orientation: landscape) {
+		label.error {
+			display: inline-block;
+			margin-left: 22%;
+		}
+	}
+	em {
+		color: red;
+		font-weight: bold;
+		padding-right: .25em;
+	}
+	</style>
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body>
+
+
+<div data-role="header" data-position="fixed" data-theme="a">
+<!--add header -->
+
+
+<div class="box1 center1 boxblue" >
+
+<img src="pics/appbanner-320x60-main.png" width="315" height="60" align="middle" />
+
+</div>
+
+</div>
+
+<!-- /header -->
+
+
+
+
+
+<div id="page1" data-role="page">
+
+
+<!--
+	<div data-role="header">
+		<h1>Welcome</h1>
+        
+        
+	</div> -->
+    
+    <div data-role="content">
+    
+    <form action="" method="get" name="myform">
+    
+    
+    
+    use this
+    
+    <input data-role="submit" type="submit" value=" - Continue - ">
+    
+    and this
+    
+    
+  
+<div data-role="ui-field-contain">
+<label class="label_16g" for="xxx"><span class="red2">*</span> xxx:</label>
+innnyyy
+<input name="xxx" id="xxx" type="text" class="print_data_22" value=""  required minlength="1" />
+</div>
+    
+    
+
+
+
+
+    
+    
+    
+			<div data-role="fieldcontain">
+				<label for="Client_ID">login:</label>
+				<input name="Client_ID" type="text" id="Client_ID" value="">
+			</div>
+            
+            
+            
+            
+            <div data-role="fieldcontain">
+				<label for="Client_ID2">22222:</label>
+				<input name="Client_ID2" type="text" id="Client_ID2" value="">
+			</div>
+            
+            
+            
+            
+			<div data-role="fieldcontain">
+				<label for="webpass">Password:</label>
+				<input type="password" name="webpass" id="webpass">
+			</div>
+            
+            <div data-role="fieldcontain">
+				<label for="test1">test1:</label>
+				<input type="text" name="test1" id="test1" required minlength="111">
+			</div>
+            
+            
+            
+            
+            
+            
+            
+			
+		
+        
+        </form>
+    
+	no need
+    
+		
+	</div>
+</div>
+
+
+--------
+<br>
+
+
+
+
+<script>
+
+$("#page1").on("pageinit", function() {
+        //alert ("test1");
+		
+        $("form").validate({
+            
+rules: {
+                Client_ID99: {
+                    required: true
+                },
+                webpass99: {
+                    required: true
+                }
+            },
+            errorPlacement: function(error, element) {
+                error.insertAfter(element.parent());
+				
+				//insertBefore ALSO
+
+                //alert ("test2");
+            },
+			
+submitHandler: function(form) {
+        //code that should happen after validation if no errors are found goes here
+        
+alert ("success");
+
+//lotsssssssssss
+	
+		        
+ },
+	
+});
+ 
+}
+
+);
+
+</script>
+
+
+</body>
+</html>

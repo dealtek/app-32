@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Independent Drivers Consortium - New Application Sign Up Start</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+<link rel="stylesheet" href="inc/jq/themes/theme-02.min.css" />
+<link rel="stylesheet" href="inc/jq/themes/jquery.mobile.icons.min.css" />
+ 
+
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+ <script>
+	$(function(){
+		$( "[data-role='header'], [data-role='footer']" ).toolbar();
+		});
+    </script>
+
+<script src="inc/jq/validate/dist/jquery.validate.js"></script>
+
+
+<link href="mob.css" rel="stylesheet" type="text/css" />
+
+  
+</head>
+<body>
+
+<div data-role="header" data-position="fixed" data-theme="a">
+<div class="box1" center1>
+
+
+
+<div class="box1 center1" >
+<a href="index.html" rel="external"><img src="pics/appbanner-320x60-home1.png" width="320" height="61" class="center" ></a>
+</div>
+
+</div>
+<!--<h1>Page head Title</h1> -->
+</div><!-- /header -->
+
+<section id="page1" data-role="page">
+    
+
+
+<div role="main" class="ui-content">
+<div class="content" >
+<div class="box1 center1" >
+  
+      
+<!--INSERT START -->
+
+<div class="box1 center1" >
+
+
+ 
+<script>
+//CLEAR ALL LOCAL STORAGE
+//start fresh especially for norton office
+localStorage.clear();
+</script>   
+
+    <p>
+       <span class="print_data_18">Independent Drivers Consortium.com</span></p>
+      <p><strong>New Driver Application Form</strong></p>
+      
+      
+      
+      
+<p><span class="print_data_22_b">YOU NEED  A STRONG INTERNET CONNECTION TO CONTINUE!</span> <br />
+<br />
+
+
+
+<span class="print_data_20">Already a client?<br>
+<a class="buttonlink2" href="login.php"> Click to Login</a></strong>
+</span>
+
+
+
+<br>
+<a rel="external" class="buttonlink2" href="index.html">Return</a>
+
+<br>
+
+
+
+<span class="print_data_20">Type in your type of company code and complete the following fields...<br></span>
+(you can add more contractors later)
+ </p>  
+  
+ <form action="" method="get" name="myform" id="myform" > 
+ 
+   
+      <div align="center">
+      
+      <table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="right" valign="middle"></td>
+  <td>
+  
+
+<div data-role="ui-field-contain"></div>
+
+<label for="conum"><span class="red2">*</span> Contractor Code Number:</label>
+<input name="conum" type="text" id="conum" class="print_data_24" value="" required minlength="3"  />
+
+
+  
+  </td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td align="right" valign="middle"></td>
+  <td>
+  
+ 
+  
+<div data-role="ui-field-contain">
+<label class="label_16g" for="firstname"><span class="red2">*</span> First Name:</label>
+<input name="firstname" id="firstname" type="text" class="print_data_24" value="" size="15" maxlength="15" required minlength="1" />
+</div>
+
+  
+  </td>
+  </tr>
+  
+  
+ 
+  <tr>
+    <td align="right" valign="middle"></td>
+  <td>
+ 
+  <div data-role="ui-field-contain">
+
+	<label class="label_16g" for="lastname"><span class="red2">*</span> Last Name:</label>
+  <input name="lastname" type="text" class="print_data_24" value="" size="15" maxlength="15" required minlength="2" />
+  
+  </div>
+  </td>
+  </tr>
+  
+  <tr>
+    <td align="right" valign="middle"> </td>
+  <td>
+  
+  <div data-role="ui-field-contain">
+
+	<label class="label_16g" for="cellphone"><span class="red2">*</span> Cellphone: </label>
+  <input name="cellphone" type="text" class="print_data_24" value="" size="15" maxlength="15" required />
+  </div>
+  
+  </td>
+  </tr>
+  
+  <tr>
+    <td align="right" valign="middle"></td>
+  <td>
+  
+   
+  
+  <div data-role="ui-field-contain"></div>
+	<label class="label_16g" for="driverslicense"><span class="red2">*</span> Driver's License: </label>
+  <input name="driverslicense" type="text" class="print_data_24" value="" size="15" maxlength="15" required />
+ 
+  
+  </td>
+  </tr>
+</table>
+
+  </div>
+<div align="center">
+       <input data-role="submit" type="submit" value=" - Continue - ">
+
+
+<input type="hidden" name="trylogin" value= "true" >
+</div>
+   
+  </form> 
+
+
+<script>
+
+$( "#page1" ).on( "pageinit", function() {
+	$( "form" ).validate({
+		rules: {
+			email: {
+				required: true
+			},
+			password: {
+				required: true
+			}
+		},
+		errorPlacement: function( error, element ) {
+			error.insertBefore( element.parent() );
+		},
+		
+		
+		// submitHandler here if valid
+		
+		submitHandler: function(form) {
+        //code that should happen after validation if no errors are found goes here
+        
+// old 1st line 
+//function testResults (form) {
+	
+var conum  = form.conum.value;
+
+var firstname  = form.firstname.value;
+var lastname  = form.lastname.value;
+
+
+var cellphone  = form.cellphone.value;
+var driverslicense  = form.driverslicense.value;
+
+
+$.get("https://idcapp.com/app-data/new-client-application-form-cart1.php?conum="+conum, function(data, status){	
+
+// alert("Data: " + data + "\nStatus: " + status);
+console.log ('data', data);
+output = "";
+
+$.each(data, function(key, value) {
+console. log ('item', key, value);
+
+
+//output += "<li><a href=\"#\">" + value.Client_ID;  
+//output += " " + value.Contact_First + " " + value.Contact_Last + "</a></li>";
+
+
+localStorage.setItem("done1", "YO221");
+
+localStorage.setItem("type_of_company_number", value.type_of_company_number);
+localStorage.setItem("CommonName", value.CommonName);
+localStorage.setItem("cl_toc_cert_desc_new", value.cl_toc_cert_desc_new);
+localStorage.setItem("cl_toc_cert_desc_renew", value.cl_toc_cert_desc_renew);
+localStorage.setItem("cl_toc_cert_fee_signup", value.cl_toc_cert_fee_signup);
+localStorage.setItem("cl_toc_cert_fee_renewal", value.cl_toc_cert_fee_renewal);
+
+
+// fix this - get ms data
+localStorage.setItem("ms", "Contracting Company: Big Transit Taxi Company<br>Contracting Company Representative: Scott Mason<br>1211 Main Street<br>Van Nuys CA 91112<br>818 111 2345");
+
+
+// fix this also
+localStorage.setItem("ms2", "Big Transit Taxi Company<br>Representative: Scott Mason<br>1211 Main Street<br>Van Nuys CA 91112<br>818 111 2345");
+
+//fix soon - get from dbase ?
+localStorage.setItem("firstname", form.firstname.value);
+
+localStorage.setItem("lastname", form.lastname.value);
+
+localStorage.setItem("cellphone", form.cellphone.value);
+
+localStorage.setItem("driverslicense", form.driverslicense.value);
+
+//extra for later - edit reg 1
+localStorage.setItem("socialsecnum", '');
+
+				
+});       
+
+window.location.replace("new-client-application-form-cart1.html");
+
+});
+
+//alert ("success");
+}
+});
+});
+
+</script>
+
+
+<div class="vsp20"></div>
+
+<div class="vsp20"></div>
+
+</div><!-- end .box --> 
+
+<!--INSERT END -->
+
+</div><!-- end .box -->
+</div><!-- end .content -->
+</div><!-- /ui-content -->
+  
+</section><!-- /page -->
+
+<!--
+no footer on this page needed
+
+<footer data-role="footer" class="ui-barNAH" data-position="fixed" data-theme="a">
+<div class="ui-grid-c boxblue">
+<?php // include('footer-inc.php'); ?>
+</div>
+</footer> -->
+<!-- /footer -->
+
+</body>
+</html>

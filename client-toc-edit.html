@@ -1,0 +1,498 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Independent Drivers Consortium - Reg 1</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+<link rel="stylesheet" href="inc/jq/themes/theme-02.min.css" />
+<link rel="stylesheet" href="inc/jq/themes/jquery.mobile.icons.min.css" />
+
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+ <script>
+	$(function(){
+		$( "[data-role='header'], [data-role='footer']" ).toolbar();
+		});
+    </script>
+
+<link href="mob.css" rel="stylesheet" type="text/css" />
+
+
+<style type="text/css" xml:space="preserve">
+BODY, P,TD{ font-family: Arial,Verdana,Helvetica, sans-serif; font-size: 10pt }
+A{font-family: Arial,Verdana,Helvetica, sans-serif;}
+B {	font-family : Arial, Helvetica, sans-serif;	font-size : 12px;	font-weight : bold;}
+.error_strings{ font-family:Verdana; font-size:14px; color:#F00; }
+</style><script language="JavaScript" src="../admin/inc/gen_validatorv4.js"
+type="text/javascript" xml:space="preserve"></script>
+
+
+
+<style type="text/css">
+
+input999
+{
+	-moz-border-radius: 11px;
+	border-radius: 11px;
+	border: 1px solid #CCC;
+	padding: .2em;
+ 	margin: .2em 0;
+	
+}
+
+.label_16g999 {
+	color: #999999;
+	font-size: 16px;
+}
+
+.big24999 {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #FFF;
+	background-color: #6290ee;
+	font-size: 24px;
+}
+
+</style>
+
+
+  
+</head>
+<body>
+
+<div data-role="header" data-position="fixed" data-theme="a">
+
+
+
+<div class="box1 center1 boxblue" >
+<a href="dashboard.html" rel="external"><img src="pics/appbanner-320x60-home1.png" width="320" height="61" class="center" ></a>
+</div>
+
+
+
+<!--<h1>Page head Title</h1> -->
+</div><!-- /header -->
+
+<section id="page01111" data-role="page">
+    
+
+
+<div role="main" class="ui-content">
+<div class="content" >
+<div class="box1 center1" >
+  
+      
+<!--INSERT START -->
+
+<!--<a rel="external" href="client-update.html" class="buttonlink2 center1">Back to Update Index</a> <br> -->
+  
+<form action="" method="post" name="thisform" id="thisform" >
+
+<table border="0" align="center" cellpadding="2" cellspacing="2">
+
+
+<tr>
+<td align="center" valign="TOP"><div align="center" class="print_data_22">
+
+<span id="Company"></span>
+<span id="Client_ID"></span>
+
+ </div>
+
+     
+<h1> <span class="red1"><strong>
+     <!-- where the response will be displayed -->
+<div id='response'></div>
+</strong></span>
+</h1>
+ 
+ 
+ 
+ </td>
+</tr>
+
+
+<!-- REV size="5"  not working -->
+
+
+<tr>
+<td width="315" height="40" align="left" valign="middle" bgcolor="#FFFFFF" class="print_data_16">
+
+
+<a class="buttonlink2" rel="external" href="contractor-contact-info.html">Return<!-- to Contractors --></a>
+
+
+<br>
+<strong>Show My Contractors I Work With</strong></td>
+</tr>
+
+
+<tr>
+<td align="LEFT" valign="TOP">
+
+<span class="print_data_20"> 
+
+<strong>
+Primary Contractor<br></strong></span>
+
+</td>
+</tr>
+
+<tr>
+<td valign="TOP" align="LEFT">
+<span class="print_data_20"> 
+<strong>
+<span id="cl_toc_CommonName"></span>
+ (<span id="type_of_company_number"></span>)
+</strong>
+</span>
+
+<br>
+<span class="print_data_16_gray">
+
+(Call IDCapp to change your primary contractor)
+</span>
+<br><br>
+
+<span class="print_data_16"> 
+<strong>
+ENTER YOUR ADDITIONAL CONTRACTOR<br>
+CODE NUMBERS (not names) BELOW
+
+<br><br>
+Additional Contractors: 
+</strong>
+</span>
+<br><br>
+
+</td>
+</tr>
+
+
+   <tr>
+    <td align="left" valign="top">
+
+
+<input type="button" class="buttonform2_24" name="submit" value= " - UPDATE THIS LIST - " onClick="testResults(this.form)" />
+  
+       </td>
+    </tr>
+
+
+  
+<tr align="left" valign="top">
+     <td align="left">
+     <span class="print_data_16_gray"> 
+Contractor Number Add/Change/Delete : 
+<input id="tocNum1" name="tocNum1" type="text" value=""  size="5" class="print_data_22">      
+</span>
+<span class="print_data_20"> <br><strong>
+
+<span id="cl_tocextra1_CommonName"></span>
+</strong></span>
+     
+<br><br>
+
+        
+ </td>
+ 
+  </tr> 
+  
+  
+  
+  
+<tr>
+<td align="left" valign="top">
+
+
+
+
+<span class="print_data_16_gray"> 
+
+Contractor Number Add/Change/Delete : 
+
+
+<input id="tocNum2" name="tocNum2" type="text" value=""  size="5" class="print_data_22">
+
+      
+
+</span>
+<span class="print_data_20"> <br>
+
+<strong>
+
+
+<span id="cl_tocextra2_CommonName"></span>
+</strong>
+
+</span>
+
+
+
+<br><br>
+
+
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+
+<span class="print_data_16_gray"> 
+Contractor Number Add/Change/Delete : 
+      
+</span>
+<span class="print_data_20"> <br>
+<strong>
+
+<span id="cl_tocextra3_CommonName"></span>
+</strong>
+</span>
+<input id="tocNum3" name="tocNum3" type="text" value=""  size="5" class="print_data_22">
+
+
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<span class="print_data_16_gray"> 
+Contractor Number Add/Change/Delete : 
+      
+</span>
+<span class="print_data_20"> <br>
+<strong>
+
+<span id="cl_tocextra4_CommonName"></span>
+</strong>
+</span>
+<input id="tocNum4" name="tocNum4" type="text" value=""  size="5" class="print_data_22">
+
+<br><br>
+</td>
+</tr>
+
+<tr>
+<td align="left" valign="top">
+<span class="print_data_16_gray"> 
+Contractor Number Add/Change/Delete : 
+      
+</span>
+<span class="print_data_20"> <br>
+<strong>
+
+<span id="cl_tocextra5_CommonName"></span>
+</strong>
+</span>
+<input id="tocNum5" name="tocNum5" type="text" value=""  size="5" class="print_data_22">
+<br><br>
+</td>
+</tr>
+
+  
+  
+  
+  <tr>
+    <td>
+    
+
+      
+</td>
+  </tr>
+  
+</table>
+
+
+</form>
+
+
+
+
+
+<script>
+
+function testResults (form) {
+    //var Client_ID  = form.Client_ID.value;
+	
+   // alert ("You typed: " + Client_ID +" " +webpass);
+
+
+//localStorage.setItem("PUC_Number", form.PUC_Number.value);
+localStorage.setItem("tocNum1", form.tocNum1.value);
+localStorage.setItem("tocNum2", form.tocNum2.value);
+localStorage.setItem("tocNum3", form.tocNum3.value);
+localStorage.setItem("tocNum4", form.tocNum4.value);
+localStorage.setItem("tocNum5", form.tocNum5.value);
+
+// start post	
+	
+// show that something is loading
+		$('#response').html("<b>Loading response...</b>");
+		
+		/*
+		 * 'post_receiver.php' - where you will pass the form data
+		 * $(this).serialize() - to easily read form data
+		 * function(data){... - data contains the response from post_receiver.php
+		 */
+//client-update-contact.php	- client-update-ztmp.php	
+
+/*
+$.post('https://idcapp.com/app-data/client-update-number.php', {			 
+
+Client_ID: localStorage.getItem("Client_ID"),
+
+PUC_Number: localStorage.getItem("PUC_Number"),
+
+
+*/ 
+
+
+//client-update-contact.php	- client-update-ztmp.php	 
+$.post('https://idcapp.com/app-data/client-toc-editup.php', {			 
+
+Client_ID: localStorage.getItem("Client_ID"),
+
+tocNum1: localStorage.getItem("tocNum1"),
+tocNum2: localStorage.getItem("tocNum2"),
+tocNum3: localStorage.getItem("tocNum3"),
+tocNum4: localStorage.getItem("tocNum4"),
+tocNum5: localStorage.getItem("tocNum5"),
+
+		
+}, function(data){
+			
+			// show the response
+			//$('#response').html(data);
+			$('#response').html("SUCCESS");
+				
+	
+console.log ('data', data);
+output = "";
+
+/*
+*/		
+$.each(data, function(key, value) {
+console. log ('item', key, value);
+
+//output += "<li><a href=\"#\">" + value.Client_ID;  
+//output += " " + value.Contact_First + " " + value.Contact_Last + "</a></li>";
+
+
+localStorage.setItem("tocNum1", value.tocNum1);
+localStorage.setItem("tocNum2", value.tocNum2);
+localStorage.setItem("tocNum3", value.tocNum3);
+localStorage.setItem("tocNum4", value.tocNum4);
+localStorage.setItem("tocNum5", value.tocNum5);
+localStorage.setItem("cl_tocextra1_CommonName", value.cl_tocextra1_CommonName);
+localStorage.setItem("cl_tocextra2_CommonName", value.cl_tocextra2_CommonName);
+localStorage.setItem("cl_tocextra3_CommonName", value.cl_tocextra3_CommonName);
+localStorage.setItem("cl_tocextra4_CommonName", value.cl_tocextra4_CommonName);
+localStorage.setItem("cl_tocextra5_CommonName", value.cl_tocextra5_CommonName);
+localStorage.setItem("mgr1_email_Confidential_Email", value.mgr1_email_Confidential_Email);
+localStorage.setItem("mgr2_email_Confidential_Email", value.mgr2_email_Confidential_Email);
+localStorage.setItem("mgr3_email_Confidential_Email", value.mgr3_email_Confidential_Email);
+localStorage.setItem("mgr4_email_Confidential_Email", value.mgr4_email_Confidential_Email);
+localStorage.setItem("mgr5_email_Confidential_Email", value.mgr5_email_Confidential_Email);
+localStorage.setItem("mgr1_contact_full_c", value.mgr1_contact_full_c);
+localStorage.setItem("mgr2_contact_full_c", value.mgr2_contact_full_c);
+localStorage.setItem("mgr3_contact_full_c", value.mgr3_contact_full_c);
+localStorage.setItem("mgr4_contact_full_c", value.mgr4_contact_full_c);
+localStorage.setItem("mgr5_contact_full_c", value.mgr5_contact_full_c);
+
+
+// update screen
+
+document.getElementById('cl_tocextra1_CommonName').textContent = localStorage.getItem("cl_tocextra1_CommonName");
+document.getElementById('cl_tocextra2_CommonName').textContent = localStorage.getItem("cl_tocextra2_CommonName");
+document.getElementById('cl_tocextra3_CommonName').textContent = localStorage.getItem("cl_tocextra3_CommonName");
+document.getElementById('cl_tocextra4_CommonName').textContent = localStorage.getItem("cl_tocextra4_CommonName");
+document.getElementById('cl_tocextra5_CommonName').textContent = localStorage.getItem("cl_tocextra5_CommonName");
+
+window.location.replace("contractor-contact-info.html");
+		
+});
+	
+	
+		
+			
+			//$('#response2').html(data);
+		}).fail(function() {
+		
+			// just in case posting your form failed
+			alert( "Posting failed." );
+			
+		});
+
+		// to prevent refreshing the whole page page
+		return false;
+
+
+//window.location.replace("new-client-application-register3.html");
+		
+			
+	
+}
+</script>
+
+<script>
+
+
+
+document.getElementById('Company').textContent = localStorage.getItem("Company");
+document.getElementById('Client_ID').textContent = localStorage.getItem("Client_ID");
+
+document.getElementById('cl_toc_CommonName').textContent = localStorage.getItem("cl_toc_CommonName");
+document.getElementById('type_of_company_number').textContent = localStorage.getItem("type_of_company_number");
+
+
+
+document.getElementById('cl_tocextra1_CommonName').textContent = localStorage.getItem("cl_tocextra1_CommonName");
+document.getElementById('cl_tocextra2_CommonName').textContent = localStorage.getItem("cl_tocextra2_CommonName");
+document.getElementById('cl_tocextra3_CommonName').textContent = localStorage.getItem("cl_tocextra3_CommonName");
+document.getElementById('cl_tocextra4_CommonName').textContent = localStorage.getItem("cl_tocextra4_CommonName");
+document.getElementById('cl_tocextra5_CommonName').textContent = localStorage.getItem("cl_tocextra5_CommonName");
+
+</script>
+
+
+
+<script>
+//pre populate
+//document.thisform.PUC_Number.value=localStorage.getItem("PUC_Number");
+document.thisform.tocNum1.value=localStorage.getItem("tocNum1");
+
+document.thisform.tocNum2.value=localStorage.getItem("tocNum2");
+document.thisform.tocNum3.value=localStorage.getItem("tocNum3");
+//
+document.thisform.tocNum4.value=localStorage.getItem("tocNum4");
+//
+document.thisform.tocNum5.value=localStorage.getItem("tocNum5");
+
+
+
+
+</script>
+
+
+<!--INSERT END -->
+
+</div><!-- end .box -->
+</div><!-- end .content -->
+</div><!-- /ui-content -->
+  
+</section><!-- /page -->
+<!--
+<footer data-role="footer" class="ui-barNAH" data-position="fixed" data-theme="a">
+<div class="ui-grid-c boxblue">
+foot
+</div>
+</footer> -->
+
+<!-- /footer -->
+
+</body>
+</html>

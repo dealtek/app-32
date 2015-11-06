@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Independent Drivers Consortium Title</title>
+
+<meta http-equiv="cache-control" content="no-cache" />
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+
+<link rel="stylesheet" href="inc/jq/themes/theme-02.min.css" />
+<link rel="stylesheet" href="inc/jq/themes/jquery.mobile.icons.min.css" />
+
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+<script>
+	$(function(){
+		$( "[data-role='header'], [data-role='footer']" ).toolbar();
+		});
+    </script>
+
+<link href="mob.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+
+
+<div data-role="header" data-position="fixed" data-theme="a">
+<!--add header -->
+</div>
+
+<!-- /header -->
+
+<section id="page01111" data-role="page">
+
+<div role="main" class="ui-content">
+<div class="content" >
+<div class="box1 center1" >
+  
+      
+<!--INSERT START -->
+
+<!--!REV - use this to get and set local then go to test display page
+ -->
+
+
+
+<!--yo <span id="today" ></span> today<br> -->
+
+
+CHECKING NOW... 
+
+Your last test check was: <span id="lastcheck_test" ></span> <br>
+
+
+
+<SCRIPT LANGUAGE="JavaScript">
+//function testResults (form) {
+	
+//alert("yooooooo1");	
+	
+	
+	
+    //var Client_ID  = form.Client_ID.value;
+	//var webpass = form.webpass.value;
+   // alert ("You typed: " + Client_ID +" " +webpass);
+	
+	
+	// make pass soon
+	
+	
+	
+	
+	
+	//var today = new Date();
+//localStorage.setItem('today', today);
+lastcheck_test = new Date();
+localStorage.setItem('lastcheck_test', lastcheck_test);
+//someday.setFullYear(2100, 0, 14);
+
+
+
+
+//document.getElementById('today').textContent = localStorage.getItem("today");
+
+document.getElementById('lastcheck_test').textContent = localStorage.getItem("lastcheck_test");
+
+	
+	
+	
+	var Client_ID  = localStorage.getItem("Client_ID");
+	
+	//tmp var Client_ID  = '4502199';
+	
+	
+	var webpass = localStorage.getItem("cl_emp_Drivers_License_No");
+	
+	
+	
+	/*
+	$.post('zpost_receiver_me01.php', { 
+		user_id: "143", 
+		username: "ninjazhai", 
+		website: "http://codeofaninja.com/" 
+		}
+	*/
+	
+	
+	
+	
+	
+	
+	/*
+	
+	$.get("https://idcapp.com/app-data/last-drug-test.php?Client_ID="+Client_ID+"&webpass="+webpass, 
+	
+	*/
+	
+	
+	/**/
+	//$.post('https://idcapp.com/app-data/last-drug-test.php', { 
+
+
+//alert("yooooooo2");	
+
+
+	
+$.post('https://idcapp.com/app-data/pre-emp-completecheck.php', { 	
+		Client_ID: Client_ID, 
+		webpass: webpass
+		
+		},
+	
+//pre-emp-completecheck	
+	
+	function(data, status){
+//$.get("https://idcapp.com/appjs/a2/clientget-11.php", function(data, status){
+
+//alert("yooooooo3");	
+
+//alert("data is "+ data.trim());	
+
+// use this for all
+var datatrim = data.trim();
+
+
+var checkit1 = data.trim();	
+var xyes = checkit1.indexOf("testfound");	
+
+
+//alert( "xyes is " + xyes);
+	
+if (xyes > -1 ){		
+// so it exists
+//alert( "yeees22");	
+localStorage.setItem("pre_emp_completecheck", data.trim());
+}else{
+//
+//alert( "no22");
+
+// better soon
+//alert( "you need a test");	
+localStorage.setItem("pre_emp_completecheck", data.trim());	
+}
+
+
+//!!!! why all the white space in data?
+
+//also this good
+
+// this is very good maybe best to check for zero recs
+
+// orig if (!$.trim(data)){  
+
+if (!datatrim){  
+
+ 
+    //alert("What follows is blank: " + datatrim);
+}
+else{   
+    //alert("What follows is not blank: " + datatrim);
+}
+
+
+window.location.replace("dashboard.html");
+
+
+/*
+
+
+if (data[0] == null) {
+//localStorage.setItem('Test_ID', "-1");
+alert("JSON empty nullllll");	
+}
+*/	
+
+
+/*
+	
+if (!data[0]) {
+//localStorage.setItem('Test_ID', "-1");
+alert("JSON empty");	
+}else{
+alert("JSON LUVVVV");		
+	}
+	
+*/	
+	
+	
+	
+	
+	
+/*
+if(localStorage.getItem("Test_ID") < 1){	
+	
+//if(value.Test_ID < 1){	
+alert("Test_ID: is nulll yo" + data + "\nStatus: " + status + " ID is "+localStorage.getItem("Test_ID"));
+}else{
+alert("Test_ID: is YUMMER" + data + "\nStatus: " + status);	
+	}	
+*/	
+	
+// YO no store any test data				
+
+// alert("Data: " + data + "\nStatus: " + status);
+console.log ('data', data);
+output = "";
+
+$.each(data, function(key, value) {
+console. log ('item', key, value);
+
+
+//output += "<li><a href=\"#\">" + value.Client_ID;  
+//output += " " + value.Contact_First + " " + value.Contact_Last + "</a></li>";
+
+
+
+//localStorage.setItem("first", value.first + "yum77mm");
+//localStorage.setItem("last", value.last + "yum88mm");
+
+/*
+
+
+localStorage.setItem('Client_ID', value.Client_ID);
+localStorage.setItem('first', value.first);
+localStorage.setItem('last', value.last);
+
+
+
+localStorage.setItem('Test_Date', value.Test_Date);
+localStorage.setItem('Test_Collection_Time', value.Test_Collection_Time);
+localStorage.setItem('Date_CCF_Received', value.Date_CCF_Received);
+localStorage.setItem('test_report_date', value.test_report_date);
+localStorage.setItem('Date_MRO_Spoke_to_worker', value.Date_MRO_Spoke_to_worker);
+localStorage.setItem('Speciman_ID_num', value.Speciman_ID_num);
+localStorage.setItem('Test_ID', value.Test_ID);
+localStorage.setItem('Type', value.Type);
+localStorage.setItem('Kind', value.Kind);
+localStorage.setItem('Outcome', value.Outcome);
+localStorage.setItem('Pos_For_1', value.Pos_For_1);
+localStorage.setItem('Pos_For_2', value.Pos_For_2);
+localStorage.setItem('Pos_For_3', value.Pos_For_3);
+localStorage.setItem('Creatinine', value.Creatinine);
+localStorage.setItem('Specific_Gravity', value.Specific_Gravity);
+localStorage.setItem('Speciman_out_of_Compliance', value.Speciman_out_of_Compliance);
+
+localStorage.setItem('tests_labs_Name', value.tests_labs_Name);
+localStorage.setItem('tests_labs_City', value.tests_labs_City);
+localStorage.setItem('tests_labs_State', value.tests_labs_State);
+localStorage.setItem('tests_labs_Zip', value.tests_labs_Zip);
+
+localStorage.setItem('tests_col_Name', value.tests_col_Name);
+localStorage.setItem('tests_col_Address', value.tests_col_Address);
+localStorage.setItem('tests_col_City', value.tests_col_City);
+localStorage.setItem('tests_col_State', value.tests_col_State);
+localStorage.setItem('tests_col_Zip', value.tests_col_Zip);
+
+localStorage.setItem('tests_sap_Name', value.tests_sap_Name);
+localStorage.setItem('tests_sap_Address', value.tests_sap_Address);
+localStorage.setItem('tests_sap_City', value.tests_sap_City);
+localStorage.setItem('tests_sap_State', value.tests_sap_State);
+localStorage.setItem('tests_sap_Zip', value.tests_sap_Zip);
+
+localStorage.setItem('tests_sap_Phone', value.tests_sap_Phone);
+
+*/
+
+
+
+/*
+document.getElementById('Client_ID').textContent = localStorage.getItem("Client_ID");
+document.getElementById('first').textContent = localStorage.getItem("first");
+document.getElementById('last').textContent = localStorage.getItem("last");
+document.getElementById('Test_Date').textContent = localStorage.getItem("Test_Date");
+document.getElementById('Test_Collection_Time').textContent = localStorage.getItem("Test_Collection_Time");
+document.getElementById('Date_CCF_Received').textContent = localStorage.getItem("Date_CCF_Received");
+document.getElementById('test_report_date').textContent = localStorage.getItem("test_report_date");
+document.getElementById('Date_MRO_Spoke_to_worker').textContent = localStorage.getItem("Date_MRO_Spoke_to_worker");
+document.getElementById('Speciman_ID_num').textContent = localStorage.getItem("Speciman_ID_num");
+document.getElementById('Test_ID').textContent = localStorage.getItem("Test_ID");
+document.getElementById('Type').textContent = localStorage.getItem("Type");
+document.getElementById('Kind').textContent = localStorage.getItem("Kind");
+document.getElementById('Outcome').textContent = localStorage.getItem("Outcome");
+document.getElementById('Pos_For_1').textContent = localStorage.getItem("Pos_For_1");
+document.getElementById('Pos_For_2').textContent = localStorage.getItem("Pos_For_2");
+document.getElementById('Pos_For_3').textContent = localStorage.getItem("Pos_For_3");
+document.getElementById('Creatinine').textContent = localStorage.getItem("Creatinine");
+document.getElementById('Specific_Gravity').textContent = localStorage.getItem("Specific_Gravity");
+document.getElementById('Speciman_out_of_Compliance').textContent = localStorage.getItem("Speciman_out_of_Compliance");
+
+
+
+document.getElementById('tests_labs_Name').textContent = localStorage.getItem("tests_labs_Name");
+document.getElementById('tests_labs_City').textContent = localStorage.getItem("tests_labs_City");
+document.getElementById('tests_labs_State').textContent = localStorage.getItem("tests_labs_State");
+document.getElementById('tests_labs_Zip').textContent = localStorage.getItem("tests_labs_Zip");
+
+
+
+document.getElementById('tests_col_Name').textContent = localStorage.getItem("tests_col_Name");
+document.getElementById('tests_col_Address').textContent = localStorage.getItem("tests_col_Address");
+document.getElementById('tests_col_City').textContent = localStorage.getItem("tests_col_City");
+document.getElementById('tests_col_State').textContent = localStorage.getItem("tests_col_State");
+document.getElementById('tests_col_Zip').textContent = localStorage.getItem("tests_col_Zip");
+
+
+
+
+
+document.getElementById('tests_sap_Name').textContent = localStorage.getItem("tests_sap_Name");
+document.getElementById('tests_sap_Address').textContent = localStorage.getItem("tests_sap_Address");
+document.getElementById('tests_sap_City').textContent = localStorage.getItem("tests_sap_City");
+document.getElementById('tests_sap_State').textContent = localStorage.getItem("tests_sap_State");
+document.getElementById('tests_sap_Zip').textContent = localStorage.getItem("tests_sap_Zip");
+
+document.getElementById('tests_sap_Phone').textContent = localStorage.getItem("tests_sap_Phone");
+
+
+*/
+
+
+}
+
+
+
+
+
+
+
+);       
+            
+			
+//window.location.replace("dashboard.html");	
+
+
+
+		
+			
+        }
+		
+		
+		
+		
+
+		
+		
+		
+		);
+		
+		
+		
+		
+	
+
+	
+//} form?
+</SCRIPT>
+
+
+
+
+
+
+
+
+
+
+
+<!--INSERT END -->
+
+</div><!-- end .box -->
+</div><!-- end .content -->
+</div><!-- /ui-content -->
+  
+</section><!-- /page -->
+
+<footer data-role="footer" class="ui-barNAH" data-position="fixed" data-theme="a">
+<div class="ui-grid-c boxblue">
+<!--add footer -->
+</div>
+</footer>
+
+<!-- /footer -->
+
+</body>
+</html>

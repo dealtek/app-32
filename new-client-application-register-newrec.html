@@ -1,0 +1,429 @@
+<!-- BIG NOTE - this too complex so have result go to new page that just says yum youre in and now pay -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Independent Drivers Consortium Title</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="inc/jq/themes/theme-02.min.css" />
+<link rel="stylesheet" href="inc/jq/themes/jquery.mobile.icons.min.css" />
+
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+<script>
+	$(function(){
+		$( "[data-role='header'], [data-role='footer']" ).toolbar();
+		});
+    </script>
+
+<link href="mob.css" rel="stylesheet" type="text/css" />
+
+  
+</head>
+<body>
+
+
+<div data-role="header" data-position="fixed" data-theme="a">
+<!--add header -->
+
+
+<div class="box1 center1 boxblue" >
+<a href="new-client-application-register1.html" rel="external"><img src="pics/appbanner-320x60-home1.png" width="320" height="61" class="center" ></a>
+</div>
+
+
+</div>
+
+<!-- /header -->
+
+<section id="page1" data-role="page">
+
+<div role="main" class="ui-content">
+<div class="content" >
+<div class="box1 center1" >
+  
+      
+<!--INSERT START -->
+
+
+<span class="print_data_22">
+
+<br>
+<strong>If All Your Info Is Correct...</strong><br>
+	</span>
+<input type='button' value='SEND YOUR INFO TO IDC' id='postJson' class="buttonlink2"/>
+
+<!-- where the response will be displayed -->
+
+
+</div>
+
+<!--PUT PAY LINK HERE -->
+<div class="print_data_22 center1" >
+
+<strong></strong>
+
+<div class="print_data_22"  id='response'></div>
+
+<span id='paylink'></span>
+
+</div>
+
+<span id="paynow"></span>
+
+
+
+<script>
+$(document).ready(function(){
+
+	$('#postJson').click(function(){
+	
+		// show that something is loading
+		//$('#response').html("<b>Loading response...</b>");
+		$('#response').html("<b>Sending Your Application to IDC...</b>");
+		
+		/*
+		 * 'post_receiver.php' - where you will pass the form data
+		 * $(this).serialize() - to easily read form data
+		 * function(data){... - data contains the response from post_receiver.php
+		 */
+		 
+	
+//
+$.post('https://idcapp.com/app-data/new-client-application-register-newrec.php', {	
+//new-client-application-register-newrec.php
+
+//Client_ID: '45021',	 
+firstname: localStorage.getItem("firstname"),
+lastname: localStorage.getItem("lastname"),
+socialsecnum: localStorage.getItem("socialsecnum"),
+cellphone: localStorage.getItem("cellphone"),
+driverslicense: localStorage.getItem("driverslicense"),
+address1: localStorage.getItem("address1"),
+city1: localStorage.getItem("city1"),
+state1: localStorage.getItem("state1"),
+zip1: localStorage.getItem("zip1"),
+type_of_company_number: localStorage.getItem("type_of_company_number"),
+SignUp_Amt: localStorage.getItem("cl_toc_cert_fee_signup"),
+DOT_100_Annual_Fee: localStorage.getItem("cl_toc_cert_fee_renewal"),
+email: localStorage.getItem("email"),
+PUC_Number: localStorage.getItem("PUC_Number"),
+cl_emp_web_agree_contract: localStorage.getItem("cl_emp_web_agree_contract")
+
+		}, function(data){
+			
+			// show the response
+			//$('#response').html(data);
+			
+			var theresp = "Success. Now Continue with payment."
+			
+			$('#response').html(theresp);
+			
+			//$('#response2').html(data);
+			
+			
+			localStorage.setItem("Client_ID", data);
+			//document.getElementById('Client_ID').textContent = localStorage.getItem("Client_ID");
+			
+			// go here
+			window.location.replace("new-client-application-payprep.html");
+			
+			
+			// nah too complex on page
+			//document.getElementById("paynow").innerHTML = "<a class=\"buttonlink2\" rel=\"external\"  href=\"new-client-application-payment.html\">Continue with Payment</a>";
+			
+			
+			
+
+			
+		}).fail(function() {
+		
+			// just in case posting your form failed
+			alert( "Posting failed." );
+			
+		});
+
+		// to prevent refreshing the whole page page
+		return false;
+
+	});
+});
+</script>
+
+
+<br>
+
+
+
+<table width="320" align="center" border="0">
+
+
+
+<tr>
+<td align="center" valign="TOP"><br>
+PLEASE REVIEW<br><div class="dash1"><a rel="external" class="buttonlink2" href="new-client-application-register1.html">Go Back to Edit Again</a></td>
+</tr>
+<tr>
+<td align="LEFT" valign="TOP"><span class="print_data_16_gray"> Name: </span></td>
+</tr>
+<tr>
+<td align="LEFT" valign="TOP"></td>
+</tr>
+<tr>
+<td valign="TOP" align="LEFT"><span class="print_data_22"><strong>
+
+
+<span id="firstname"></span>
+<span id="lastname"></span>
+<br>
+
+</strong></td>
+</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+<td align="LEFT" valign="TOP"><span class="print_data_16_gray"> Social Security Number: </span></td>
+</tr>
+<tr>
+<td align="LEFT" valign="TOP"></td>
+</tr>
+<tr>
+<td valign="TOP" align="LEFT"><span class="print_data_22"><strong>
+<span id="socialsecnum"></span>
+</strong></td>
+</tr>
+
+
+
+
+<tr>
+<td align="LEFT" valign="TOP"><span class="print_data_16_gray">Cellphone: </span></td>
+</tr>
+<tr>
+<td align="LEFT" valign="TOP"></td>
+</tr>
+<tr>
+<td valign="TOP" align="LEFT"><span class="print_data_22"><strong>
+<span id="cellphone"></span>
+</strong></td>
+</tr>
+
+
+<tr>
+<td align="LEFT" valign="TOP"><span class="print_data_16_gray"> Drivers License: </span></td>
+</tr>
+<tr>
+<td align="LEFT" valign="TOP"></td>
+</tr>
+<tr>
+<td valign="TOP" align="LEFT"><span class="print_data_22"><strong>
+<span id="driverslicense"></span>
+</strong></td>
+</tr>
+
+
+<tr>
+<td align="LEFT" valign="TOP"><span class="print_data_16_gray">Email: </span></td>
+</tr>
+<tr>
+<td align="LEFT" valign="TOP"></td>
+</tr>
+<tr>
+<td valign="TOP" align="LEFT"><span class="print_data_22"><strong>
+<span id="email"></span>
+</strong></td>
+</tr>
+
+
+<tr>
+<td align="LEFT" valign="TOP"><span class="print_data_16_gray">PUC Number (optional): </span></td>
+</tr>
+<tr>
+<td align="LEFT" valign="TOP"></td>
+</tr>
+<tr>
+<td valign="TOP" align="LEFT"><span class="print_data_22"><strong>
+<span id="PUC_Number"></span>
+</strong></td>
+</tr>
+
+
+<tr>
+<td align="LEFT" valign="TOP"><span class="print_data_16_gray">Address: </span></td>
+</tr>
+<tr>
+<td align="LEFT" valign="TOP"></td>
+</tr>
+<tr>
+<td valign="TOP" align="LEFT"><span class="print_data_22"><strong>
+<span id="address1"></span>
+</strong></td>
+</tr>
+
+
+
+
+
+
+
+
+<tr>
+<td align="LEFT" valign="TOP"><span class="print_data_16_gray">City: </span></td>
+</tr>
+<tr>
+<td align="LEFT" valign="TOP"></td>
+</tr>
+<tr>
+<td valign="TOP" align="LEFT"><span class="print_data_22"><strong>
+<span id="city1"></span>
+</strong></td>
+</tr>
+
+
+
+
+
+
+
+
+
+
+<tr>
+<td align="LEFT" valign="TOP"><span class="print_data_16_gray">State: </span></td>
+</tr>
+<tr>
+<td align="LEFT" valign="TOP"></td>
+</tr>
+<tr>
+<td valign="TOP" align="LEFT"><span class="print_data_22"><strong>
+<span id="state1"></span>
+
+</strong></td>
+</tr>
+
+
+
+
+<tr>
+<td align="LEFT" valign="TOP"><span class="print_data_16_gray">Zip: </span></td>
+</tr>
+<tr>
+<td align="LEFT" valign="TOP"></td>
+</tr>
+<tr>
+<td valign="TOP" align="LEFT"><span class="print_data_22"><strong>
+<span id="zip1"></span>
+
+</strong></td>
+</tr>
+
+
+
+
+<tr>
+<td align="LEFT" valign="TOP"><span class="print_data_16_gray"> Name: </span></td>
+</tr>
+<tr>
+<td align="LEFT" valign="TOP"></td>
+</tr>
+<tr>
+<td valign="TOP" align="LEFT"><span class="print_data_22"><strong>
+<span id="firstname"></span>
+<span id="lastname"></span>
+</strong></td>
+</tr>
+
+
+
+
+
+
+
+<tr>
+
+<td valign="TOP" align="left" >
+
+
+<!--
+<div class="widebox1"> </div>
+ -->
+<!--<div class="dash1"><a rel="external" class="buttonlink2" href="new-client-application-register1.html">go back</a></div> -->
+
+
+
+
+
+
+
+</td>
+</tr>
+</table>
+
+
+
+
+
+<script>
+//pre populate
+
+document.getElementById('address1').textContent = localStorage.getItem("address1");
+document.getElementById('city1').textContent = localStorage.getItem("city1");
+document.getElementById('state1').textContent = localStorage.getItem("state1");
+document.getElementById('zip1').textContent = localStorage.getItem("zip1");
+document.getElementById('firstname').textContent = localStorage.getItem("firstname");
+document.getElementById('lastname').textContent = localStorage.getItem("lastname");
+document.getElementById('cellphone').textContent = localStorage.getItem("cellphone");
+document.getElementById('driverslicense').textContent = localStorage.getItem("driverslicense");
+document.getElementById('socialsecnum').textContent = localStorage.getItem("socialsecnum");
+document.getElementById('email').textContent = localStorage.getItem("email");
+document.getElementById('PUC_Number').textContent = localStorage.getItem("PUC_Number");
+
+
+
+
+</script>
+
+
+<script>
+//document.getElementById("yum1").innerHTML = "<a rel=\"external\"  href=\"collection-sites1.html?zip=9999\">Find a Drug Testing Site</a>";
+</script>
+
+
+
+
+<!--INSERT END -->
+
+</div><!-- end .box -->
+</div><!-- end .content -->
+</div><!-- /ui-content -->
+  
+</section><!-- /page -->
+
+<footer data-role="footer" class="ui-barNAH" data-position="fixed" data-theme="a">
+<div class="ui-grid-c boxblue">
+<!--add footer -->
+</div>
+</footer>
+
+<!-- /footer -->
+
+</body>
+</html>

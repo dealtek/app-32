@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Independent Drivers Consortium login from new app</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+<link rel="stylesheet" href="inc/jq/themes/theme-02.min.css" />
+<link rel="stylesheet" href="inc/jq/themes/jquery.mobile.icons.min.css" />
+
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+<script>
+	$(function(){
+		$( "[data-role='header'], [data-role='footer']" ).toolbar();
+		});
+    </script>
+
+<link href="mob.css" rel="stylesheet" type="text/css" />
+  
+</head>
+<body>
+
+
+<div data-role="header" data-position="fixed" data-theme="a">
+<!--add header -->
+
+
+<div class="box1 center1" >
+
+<img src="pics/appbanner-320x60-main.png" width="315" height="60" align="middle" />
+
+</div>
+
+</div>
+
+<!-- /header -->
+
+<section id="page01111" data-role="page">
+
+<div role="main" class="ui-content">
+<div class="content" >
+<div class="box1 center1" >
+  
+      
+<!--INSERT START -->
+
+
+
+<h3>IDC LOGIN</h3>
+
+Login to our <strong class="green1">- Secure Server - </strong><br><br>
+
+<h1> <span class="red1"><strong>
+     <!-- where the response will be displayed -->
+<div id='response'></div>
+</strong></span>
+</h1>
+
+
+
+
+<script>
+
+
+// YO now auto login in after new app sign up just to get all the filed and LS filled in
+
+$(document).ready(function(){
+// start post	
+	
+// show that something is loading
+		$('#response').html("<b>Logging Into IDC...</b>");
+		
+		/*
+		 * 'post_receiver.php' - where you will pass the form data
+		 * $(this).serialize() - to easily read form data
+		 * function(data){... - data contains the response from post_receiver.php
+		 */
+
+$.post('https://idcapp.com/app-data/login-main.php', {			 
+
+Client_ID: localStorage.getItem("Client_ID"),
+password: localStorage.getItem("password"),	
+
+	
+}, function(data){
+			
+			// show the response
+			// bak $('#response').html(data);
+			// FIX THIS WITH BETTER SOON - do dbetter in php page
+			$('#response').html("SUCCESS");
+			
+			// alert("Data: " + data + "\nStatus: " + status);
+console.log ('data', data);
+output = "";
+
+var date_lastlogin = new Date();
+localStorage.setItem('date_lastlogin', date_lastlogin);
+
+
+$.each(data, function(key, value) {
+console. log ('item', key, value);
+
+//output += "<li><a href=\"#\">" + value.Client_ID;  
+//output += " " + value.Contact_First + " " + value.Contact_Last + "</a></li>";
+
+
+localStorage.setItem("Contact_First", value.Contact_First);
+localStorage.setItem("Contact_Last", value.Contact_Last);
+localStorage.setItem("Client_ID", value.Client_ID);
+localStorage.setItem("password", value.password);
+localStorage.setItem("type_of_company_number", value.type_of_company_number);
+
+localStorage.setItem("Company", value.Company);
+localStorage.setItem("Phone1", value.Phone1);
+localStorage.setItem("Phone2", value.Phone2);
+localStorage.setItem("Fax", value.Fax);
+localStorage.setItem("Address", value.Address);
+localStorage.setItem("City", value.City);
+localStorage.setItem("State", value.State);
+localStorage.setItem("Zip", value.Zip);
+localStorage.setItem("Billing_Company_Name", value.Billing_Company_Name);
+localStorage.setItem("F_Name_Billing", value.F_Name_Billing);
+localStorage.setItem("L_Name_Billing", value.L_Name_Billing);
+localStorage.setItem("Billing_Address", value.Billing_Address);
+localStorage.setItem("Billing_City", value.Billing_City);
+localStorage.setItem("Billing_State", value.State);
+localStorage.setItem("Billing_Zip", value.Billing_Zip);
+localStorage.setItem("Billing_Phone", value.Billing_Phone);
+localStorage.setItem("Billing_Fax", value.Billing_Fax);
+localStorage.setItem("email_Billing_Address", value.email_Billing_Address);
+//localStorage.setItem("email_Billing_Address", 'yo22em');
+localStorage.setItem("cl_emp_First", value.cl_emp_First);
+localStorage.setItem("cl_emp_Last", value.cl_emp_Last);
+
+localStorage.setItem("cl_emp_City_Taxi_Permit_No", value.cl_emp_City_Taxi_Permit_No);
+localStorage.setItem("cl_emp_City_Taxi_Permit_Expiration", value.cl_emp_City_Taxi_Permit_Expiration);
+// nah dupe fields to dump localStorage.setItem("cl_emp_PUC_Number", value.cl_emp_PUC_Number);
+
+localStorage.setItem("cl_emp_Drivers_License_No", value.cl_emp_Drivers_License_No);
+localStorage.setItem("cl_emp_Notify_Email", value.cl_emp_Notify_Email);
+localStorage.setItem("cl_emp_Notify_PhoneText", value.cl_emp_Notify_PhoneText);
+localStorage.setItem("cl_emp_Social_Security", value.cl_emp_Social_Security);
+localStorage.setItem("cl_emp_security_code", value.cl_emp_security_code);
+
+localStorage.setItem("PUC_Number", value.PUC_Number);
+localStorage.setItem("PUC_Date", value.PUC_Date);
+localStorage.setItem("Kind_of_Company", value.Kind_of_Company);
+localStorage.setItem("Date_Signup", value.Date_Signup);
+localStorage.setItem("Date_Terminated", value.Date_Terminated);
+localStorage.setItem("date_term_web_CL", value.date_term_web_CL);
+
+localStorage.setItem("Date_Entered", value.Date_Entered);
+localStorage.setItem("Status", value.Status);
+localStorage.setItem("Type", value.Type);
+
+localStorage.setItem("cl_toc_City", value.cl_toc_City);
+localStorage.setItem("cl_toc_term_reason_toggle", value.cl_toc_term_reason_toggle);
+localStorage.setItem("email_Confidential_Email", value.email_Confidential_Email);
+localStorage.setItem("email_Agency", value.email_Agency);
+
+
+
+localStorage.setItem("date_term_web_CL", value.date_term_web_CL);
+localStorage.setItem("cl_toc_cert_desc_new", value.cl_toc_cert_desc_new);
+localStorage.setItem("cl_toc_cert_desc_renew", value.cl_toc_cert_desc_renew);
+localStorage.setItem("cl_toc_cert_fee_signup", value.cl_toc_cert_fee_signup);
+localStorage.setItem("cl_toc_cert_fee_renewal", value.cl_toc_cert_fee_renewal);
+localStorage.setItem("cl_toc_CommonName", value.cl_toc_CommonName);
+localStorage.setItem("date_TAXI_1stpaid_certific", value.date_TAXI_1stpaid_certific);
+localStorage.setItem("Date_TAXI_1st_yr_certi_expire", value.Date_TAXI_1st_yr_certi_expire);
+localStorage.setItem("cl_emp_date_last_drug_db", value.cl_emp_date_last_drug_db);
+localStorage.setItem("cl_emp_Division_ID_Num", value.cl_emp_Division_ID_Num);
+localStorage.setItem("cl_emp_Division_Name", value.cl_emp_Division_Name);
+localStorage.setItem("cl_toc_owner_email_Confidential_Email", value.cl_toc_owner_email_Confidential_Email);
+localStorage.setItem("cl_toc_owner_contact_full_c", value.cl_toc_owner_contact_full_c);
+localStorage.setItem("tocNum1", value.tocNum1);
+localStorage.setItem("tocNum2", value.tocNum2);
+localStorage.setItem("tocNum3", value.tocNum3);
+localStorage.setItem("tocNum4", value.tocNum4);
+localStorage.setItem("tocNum5", value.tocNum5);
+localStorage.setItem("cl_tocextra1_CommonName", value.cl_tocextra1_CommonName);
+localStorage.setItem("cl_tocextra2_CommonName", value.cl_tocextra2_CommonName);
+localStorage.setItem("cl_tocextra3_CommonName", value.cl_tocextra3_CommonName);
+localStorage.setItem("cl_tocextra4_CommonName", value.cl_tocextra4_CommonName);
+localStorage.setItem("cl_tocextra5_CommonName", value.cl_tocextra5_CommonName);
+localStorage.setItem("mgr1_email_Confidential_Email", value.mgr1_email_Confidential_Email);
+localStorage.setItem("mgr2_email_Confidential_Email", value.mgr2_email_Confidential_Email);
+localStorage.setItem("mgr3_email_Confidential_Email", value.mgr3_email_Confidential_Email);
+localStorage.setItem("mgr4_email_Confidential_Email", value.mgr4_email_Confidential_Email);
+localStorage.setItem("mgr5_email_Confidential_Email", value.mgr5_email_Confidential_Email);
+localStorage.setItem("mgr1_contact_full_c", value.mgr1_contact_full_c);
+localStorage.setItem("mgr2_contact_full_c", value.mgr2_contact_full_c);
+localStorage.setItem("mgr3_contact_full_c", value.mgr3_contact_full_c);
+localStorage.setItem("mgr4_contact_full_c", value.mgr4_contact_full_c);
+localStorage.setItem("mgr5_contact_full_c", value.mgr5_contact_full_c);
+localStorage.setItem("LabMasterAccount", value.LabMasterAccount);
+localStorage.setItem("cl_toc_Federal", value.cl_toc_Federal);
+
+localStorage.setItem("z_mod_date", value.z_mod_date);
+localStorage.setItem("z_webtmp3", value.z_webtmp3);
+
+localStorage.setItem("done1", "yoyo11");
+
+//window.location.replace("dashboard.html");
+window.location.replace("collection-sites1.html");
+		
+});
+
+
+			//$('#response2').html(data);
+		}).fail(function() {
+		
+			// just in case posting your form failed
+			alert( "Posting failed." );
+			
+		});
+
+		// to prevent refreshing the whole page page
+		return false;
+
+
+			
+})	
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--INSERT END -->
+
+</div><!-- end .box -->
+</div><!-- end .content -->
+</div><!-- /ui-content -->
+  
+</section><!-- /page -->
+
+<!--
+<footer data-role="footer" class="ui-barNAH" data-position="fixed" data-theme="a">
+<div class="ui-grid-c boxblue">
+
+</div>
+</footer> -->
+<!--add footer -->
+<!-- /footer -->
+
+</body>
+</html>

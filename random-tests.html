@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Independent Drivers Consortium Search for a Lab - COLLECTION SITES</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+<link rel="stylesheet" href="inc/jq/themes/theme-02.min.css" />
+<link rel="stylesheet" href="inc/jq/themes/jquery.mobile.icons.min.css" />
+
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+ <script>
+	$(function(){
+		$( "[data-role='header'], [data-role='footer']" ).toolbar();
+		});
+    </script>
+
+<link href="mob.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.thinbox {
+	border: thin solid #CCC;
+	/*margin: 4px;*/
+	padding: 4px;
+	width: 133px;
+}
+</style>  
+</head>
+<body>
+
+<div data-role="header" data-position="fixed" data-theme="a">
+
+
+<div class="box1 center1 boxblue" >
+<a href="dashboard.html" rel="external"><img src="pics/appbanner-320x60-home1.png" width="320" height="61" class="center" ></a>
+</div>
+
+
+<!--<h1>Page head Title</h1> -->
+</div><!-- /header -->
+
+<section id="page01111" data-role="page">
+
+
+<div role="main" class="ui-content">
+<div class="content" >
+<div class="box1 center1" >
+  
+<!--INSERT START -->
+
+<a rel="external" href="dashboard.html" class="buttonlink2 center1">return</a> <br>
+
+<div>
+
+<table border="0" align="center" cellpadding="2" cellspacing="2">
+
+<tr>
+<td></td>
+<td >
+
+
+
+</td>
+<td></td>
+</tr>
+</table>
+
+
+
+
+</div>
+
+
+<script>
+var Client_ID = localStorage.getItem("Client_ID");
+	
+	//var Client_ID = 25658;
+	
+	var webpass = localStorage.getItem("cl_emp_Drivers_License_No");
+
+	
+$.post('https://idcapp.com/app-data/random-tests.php', { 	
+		Client_ID: Client_ID, 
+		webpass: webpass
+		
+		},
+function(data, status){
+	
+// alert("Data: " + data + "\nStatus: " + status);
+console.log ('data', data);
+output = "";
+ 
+// YO how do i add in the $completecheck I hid inside the loop 
+
+$.each(data, function(key, value) {
+            	console. log ('item', key, value);
+
+//adding in loop	just add 1x
+// fix more later	
+localStorage.setItem("rt_completecheck", value.completecheck);				
+			
+output += "<tr>" + 
+				
+
+"<td class='thinbox'><span class='thinbox9'>" + value.RandomTests_TestRequestDate + "</span></td>" + 
+"<td class='thinbox'><span class='thinbox9'>" + value.TestRequired + "</span></td>" + 
+"<td class='thinbox'><span class='thinbox9'>" + value.rte_Tests_CompleteCheck_Test_Collection_Time + "</span></td>" + 
+"<td class='thinbox'><span class='thinbox9'>" + value.zdb_test_complete_check2 + "</span></td>" + 
+"<td class='thinbox'><span class='thinbox9'>" + value.rte_Tests_CompleteCheck_Test_Date + "</span></td>"
++ "</tr>";
+			});       
+            $('#list').html( output );
+            $('#list').listview( "refresh" );
+
+
+	});
+	
+		
+//}
+</script>
+
+<br><br><br>
+
+RECENT RANDOM TEST LISTINGS FOR:<br>
+
+<span class="print_data_22_b">
+
+<span id="Company">
+
+</span>
+
+</span><br>
+<br>
+<br>
+
+<div align="center">
+
+<div id="list" data-role="listview"></div>
+</div>
+
+<br><br>
+
+
+<span class="print_data_22_b">
+
+<span id="rtshow"></span>
+
+</span>
+<br><br>
+
+<!--INSERT END -->
+
+</div><!-- end .box -->
+</div><!-- end .content -->
+</div><!-- /ui-content -->
+  
+</section><!-- /page -->
+
+<footer data-role="footer" class="ui-barNAH" data-position="fixed" data-theme="a">
+<div class="ui-grid-c boxblue">
+<!--foot -->
+</div>
+</footer>
+
+
+<!-- /footer -->
+
+
+<!-- code for including header/footer -->
+    <script type="text/javascript">
+      
+      // we're ready, include away
+      $(window).ready(function(){
+        
+        // use easy AJAX jQuery helpers
+        
+		// head no work!!!!
+        // add header.html into <header>
+        $.get("header-inc.html", function(fileData){
+          $('header').html(fileData); 
+        });
+
+        // add footer.html into <footer>
+        $.get("footer-inc.html", function(fileData){
+          $('footer').html(fileData); 
+        });
+       
+	 /*   */	   
+      });
+      
+</script>
+
+<script>
+
+document.getElementById('Company').textContent = localStorage.getItem("Company");
+
+if (localStorage.getItem("rt_completecheck") == 'yestest'){
+document.getElementById('rtshow').textContent = 'You need a random test.';
+}else if (localStorage.getItem("rt_completecheck") == '') {
+document.getElementById('rtshow').textContent = 'No Random Selections Found Right Now';	
+}else{
+document.getElementById('rtshow').textContent = '';
+}
+
+</script>
+  
+</body>
+</html>

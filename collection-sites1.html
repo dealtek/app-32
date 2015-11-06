@@ -1,0 +1,279 @@
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Independent Drivers Consortium Search for a Lab - COLLECTION SITES</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+
+<!--
+-->
+<link rel="stylesheet" href="inc/jq/themes/theme-02.min.css" />
+<link rel="stylesheet" href="inc/jq/themes/jquery.mobile.icons.min.css" />
+
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+ <script>
+	$(function(){
+		$( "[data-role='header'], [data-role='footer']" ).toolbar();
+		});
+    </script>
+
+<link href="mob.css" rel="stylesheet" type="text/css" />
+
+  
+</head>
+<body>
+
+<div data-role="header" data-position="fixed" data-theme="a">
+
+
+<div class="box1 center1 boxblue" >
+<a href="dashboard.html" rel="external"><img src="pics/appbanner-320x60-home1.png" width="320" height="61" class="center" ></a>
+</div>
+
+
+<!--<h1>Page head Title</h1> -->
+</div><!-- /header -->
+
+<section id="page01111" data-role="page">
+
+
+<div role="main" class="ui-content">
+<div class="content" >
+<div class="box1 center1" >
+  
+      
+<!--INSERT START -->
+
+
+
+
+<div>
+
+<table border="0" align="center" cellpadding="2" cellspacing="2">
+
+<tr>
+<td>
+
+</td>
+
+
+<td>
+
+
+
+
+<!--<form action="" method="get">
+ -->
+
+<form action=""  method="GET" name="nowform" id="nowform">
+
+
+<table width="100%" border="0" cellspacing="2" cellpadding="2">
+<tr>
+<td>
+<?php // echo $_GET["zip"]?>
+
+<input id="Zip" name="Zip" type="text" value="" size="8" class="print_data_22"></td>
+<td>
+
+
+
+
+
+<input type="button" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-search" name="submit" value= "Enter Partial Zip Code" onClick="testResults(this.form)" />
+
+
+
+
+
+<!--
+<button class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-search">Enter Partial Zip Code</button>
+ -->
+
+ </td>
+</tr>
+</table>
+
+
+
+</form>
+
+</td>
+
+<td>
+
+
+
+</td>
+
+
+
+
+
+
+</tr>
+<tr>
+<td></td>
+<td >
+
+
+<span class="print_data_16"><strong>You Need A Pre-Employment Drug Test<br>
+To Be An Active  Driver in the IDC.
+
+<br>
+
+<span class="print_data_22_b">Be Sure To Show The Collector Notice To Your Collector.</span>
+
+
+</strong></span>
+
+<br>
+
+<a class="buttonlink7" href="client-testing.html" rel="external"> <span class="bigfont2">Collectors Notice</span> </a> 
+<br>
+
+<a class="buttonlink2" href="collection-sites2.html" rel="external"> <span class="bigfont2">Alcohol Testing Collection Sites</span> </a>
+
+
+
+</td>
+<td></td>
+</tr>
+</table>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+<script>
+
+
+
+var Zip = localStorage.getItem("Zip");
+var ZipPart = Zip.substring(0, 2);
+
+//pre populate
+document.nowform.Zip.value=ZipPart;
+
+//document.getElementById('Zip').textContent = localStorage.getItem("Zip");
+
+//document.getElementById('ZipPart').textContent = ZipPart;
+</script>
+
+<script>
+
+function testResults (form) {
+    //var Client_ID  = form.Client_ID.value;
+	//var webpass = form.webpass.value;
+   // alert ("You typed: " + Client_ID +" " +webpass);
+   
+   var zip = form.Zip.value;
+   //var zip = '91';
+	
+	
+	$.get("https://idcapp.com/app-data/collection-sites1.php?zip="+zip, function(data, status){
+			
+// alert("Data: " + data + "\nStatus: " + status);
+console.log ('data', data);
+output = "";
+
+$.each(data, function(key, value) {
+            	console. log ('item', key, value);
+    			output += "<li>" + 
+				"LABCORP<br>TEL: " +
+				value.PHONE + 
+				"<br>" + value.ADDRESS
+				+ "<br> <strong>" + value.CITY
+				+ ", " + value.ST
+				+ "</strong> " + value.ZIP
+				+ "<br>Days: " + value.DAYS
+				+ "<br>Hours: " + value.HOURS + "</li>";
+			});       
+            $('#list').html( output );
+            $('#list').listview( "refresh" );
+
+
+      
+            //$('#list').html( output );
+            //$('#list').listview( "refresh" );
+	//window.location.replace("http://www.mydomain.com/new-page.html");
+		
+//after loadup go to cl.......
+//window.location.replace("client-contact-info.html");
+		
+		//
+		//window.location.replace("dashboard.html");
+		
+	});
+		
+}
+</script>
+
+<br>
+
+<div data-role="main" class="ui-content">
+<ul id="list" data-role="listview">
+</ul>
+</div>
+
+
+<!--INSERT END -->
+
+</div><!-- end .box -->
+</div><!-- end .content -->
+</div><!-- /ui-content -->
+  
+</section><!-- /page -->
+
+<footer data-role="footer" class="ui-barNAH" data-position="fixed" data-theme="a">
+<div class="ui-grid-c boxblue">
+<!--foot -->
+</div>
+</footer>
+
+
+<!-- /footer -->
+
+
+<!-- code for including header/footer -->
+    <script type="text/javascript">
+      
+      // we're ready, include away
+      $(window).ready(function(){
+        
+        // use easy AJAX jQuery helpers
+        
+		// header no work!!!!
+        // add header.html into <header>
+        $.get("header-inc.html", function(fileData){
+          $('header').html(fileData); 
+        });
+				
+        // add footer.html into <footer>
+        $.get("footer-inc.html", function(fileData){
+          $('footer').html(fileData); 
+        });
+       
+	 /*   */
+	   
+	   
+      });
+      
+    </script>
+
+</body>
+</html>

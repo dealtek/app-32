@@ -1,0 +1,693 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Independent Drivers Consortium Dashboard</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+ 
+<link rel="stylesheet" href="inc/jq/themes/theme-02.min.css" />
+<link rel="stylesheet" href="inc/jq/themes/jquery.mobile.icons.min.css" />
+
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+<script>
+	$(function(){
+		$( "[data-role='header'], [data-role='footer']" ).toolbar();
+		});
+    </script>
+
+<style type="text/css">
+img.center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto
+}
+.box1 {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #06C;
+}
+</style>
+<style type="text/css">
+<!--
+.center1 {
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	text-align: center;
+}
+.box199 {
+	background-image: url(pics/stripes_teal_bkgrnd.gif);
+	height: 100%;
+	width: 100%;
+}
+.box2 {
+	background-image: url(pics/stripes_teal_bkgrnd.gif);
+}
+.bighead1 {
+	color: #000066;
+	font-weight: bold;
+	font-size: 18px;
+}
+.bigfont1 {
+	font-weight: bold;
+	font-size: 18px;
+}
+.bigfont2 {
+	font-weight: bold;
+	font-size: 18px;
+	text-align: center;
+	vertical-align: middle;
+	display: block;
+	height: 40px;
+	line-height: 40px;
+}
+.fgreen {
+	color: #090;
+}
+.fblue {
+	color: #03F;
+}
+-->
+</style>
+<style type="text/css">
+img.center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto
+}
+.box1 {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #06C;
+}
+
+
+
+/* start red test row  THIS FOR RED NEED TEST ONLY can clean soon */
+
+
+/* Button up
+.ui-page-theme-a .ui-btn,
+html .ui-bar-a .ui-btn,
+html .ui-body-a .ui-btn,
+html body .ui-group-theme-a .ui-btn,
+*/
+html head + body .ui-btn.ui-btn-c,
+/* Button visited 
+.ui-page-theme-a .ui-btn:visited,
+html .ui-bar-a .ui-btn:visited,
+html .ui-body-a .ui-btn:visited,
+html body .ui-group-theme-a .ui-btn:visited,
+*/
+html head + body .ui-btn.ui-btn-c:visited {
+	background-color: #00CC00 /* #CC6666 CC6666 6290ee 3694d1 5bacdb revdave mod 29abe2 old{a-bup-background-color}*/;
+	border-color: #165e7c /*{a-bup-border}*/;
+	color: #ffffff /*{a-bup-color}*/;
+	text-shadow: 0 /*{a-bup-shadow-x}*/ 1px /*{a-bup-shadow-y}*/ 0 /*{a-bup-shadow-radius}*/ #444444 /*{a-bup-shadow-color}*/;
+}
+
+/* end red test row */
+
+/* Links */
+.ui-page-theme-a a,
+html .ui-bar-a a,
+html .ui-body-a a,
+html body .ui-group-theme-a a {
+	color: #3388cc /*{a-link-color}*/;
+	font-weight: bold;
+}
+.ui-page-theme-a a:visited,
+html .ui-bar-a a:visited,
+html .ui-body-a a:visited,
+html body .ui-group-theme-a a:visited {
+    color: #3388cc /*{a-link-visited}*/;
+}
+.ui-page-theme-a a:hover,
+html .ui-bar-a a:hover,
+html .ui-body-a a:hover,
+html body .ui-group-theme-a a:hover {
+	color: #005599 /*{a-link-hover}*/;
+}
+.ui-page-theme-a a:active,
+html .ui-bar-a a:active,
+html .ui-body-a a:active,
+html body .ui-group-theme-a a:active {
+	color: #005599 /*{a-link-active}*/;
+}
+/* Button up */
+.ui-page-theme-a .ui-btn,
+html .ui-bar-a .ui-btn,
+html .ui-body-a .ui-btn,
+html body .ui-group-theme-a .ui-btn,
+html head + body .ui-btn.ui-btn-a,
+/* Button visited */
+.ui-page-theme-a .ui-btn:visited,
+html .ui-bar-a .ui-btn:visited,
+html .ui-body-a .ui-btn:visited,
+html body .ui-group-theme-a .ui-btn:visited,
+html head + body .ui-btn.ui-btn-a:visited {
+	background-color: #6290ee /* 6290ee 3694d1 5bacdb revdave mod 29abe2 old{a-bup-background-color}*/;
+	border-color: #165e7c /*{a-bup-border}*/;
+	color: #ffffff /*{a-bup-color}*/;
+	text-shadow: 0 /*{a-bup-shadow-x}*/ 1px /*{a-bup-shadow-y}*/ 0 /*{a-bup-shadow-radius}*/ #444444 /*{a-bup-shadow-color}*/;
+}
+/* Button hover */
+.ui-page-theme-a .ui-btn:hover,
+html .ui-bar-a .ui-btn:hover,
+html .ui-body-a .ui-btn:hover,
+html body .ui-group-theme-a .ui-btn:hover,
+html head + body .ui-btn.ui-btn-a:hover {
+	background-color: #14065b /* real 2fc4FF 5bacdb --- FF00FF 3694d1 revdave mod 29abe2 {a-bhover-background-color}*/;
+	border-color: #196b8c /*{a-bhover-border}*/;
+	color: #ffffff /*{a-bhover-color}*/;
+	text-shadow: 0 /*{a-bhover-shadow-x}*/ 1px /*{a-bhover-shadow-y}*/ 0 /*{a-bhover-shadow-radius}*/ #444444 /*{a-bhover-shadow-color}*/;
+}
+/* Button down */
+.ui-page-theme-a .ui-btn:active,
+html .ui-bar-a .ui-btn:active,
+html .ui-body-a .ui-btn:active,
+html body .ui-group-theme-a .ui-btn:active,
+html head + body .ui-btn.ui-btn-a:active {
+	background-color: #2fc4FF /*{a-bdown-background-color}*/;
+	border-color: #196b8c /*{a-bdown-border}*/;
+	color: #000000 /*{a-bdown-color}*/;
+	text-shadow: 0 /*{a-bdown-shadow-x}*/ 1px /*{a-bdown-shadow-y}*/ 0 /*{a-bdown-shadow-radius}*/ #eeeeee /*{a-bdown-shadow-color}*/;
+}
+/* Active button */
+.ui-page-theme-a .ui-btn.ui-btn-active,
+html .ui-bar-a .ui-btn.ui-btn-active,
+html .ui-body-a .ui-btn.ui-btn-active,
+html body .ui-group-theme-a .ui-btn.ui-btn-active,
+html head + body .ui-btn.ui-btn-a.ui-btn-active,
+/* Active checkbox icon */
+.ui-page-theme-a .ui-checkbox-on:after,
+html .ui-bar-a .ui-checkbox-on:after,
+html .ui-body-a .ui-checkbox-on:after,
+html body .ui-group-theme-a .ui-checkbox-on:after,
+.ui-btn.ui-checkbox-on.ui-btn-a:after,
+/* Active flipswitch background */
+.ui-page-theme-a .ui-flipswitch-active,
+html .ui-bar-a .ui-flipswitch-active,
+html .ui-body-a .ui-flipswitch-active,
+html body .ui-group-theme-a .ui-flipswitch-active,
+html body .ui-flipswitch.ui-bar-a.ui-flipswitch-active,
+/* Active slider track */
+.ui-page-theme-a .ui-slider-track .ui-btn-active,
+html .ui-bar-a .ui-slider-track .ui-btn-active,
+html .ui-body-a .ui-slider-track .ui-btn-active,
+html body .ui-group-theme-a .ui-slider-track .ui-btn-active,
+html body div.ui-slider-track.ui-body-a .ui-btn-active {
+	background-color: #3388cc /*{a-active-background-color}*/;
+	border-color: #3388cc /*{a-active-border}*/;
+	color: #ffffff /*{a-active-color}*/;
+	text-shadow: 0 /*{a-active-shadow-x}*/ 1px /*{a-active-shadow-y}*/ 0 /*{a-active-shadow-radius}*/ #005599 /*{a-active-shadow-color}*/;
+}
+/* Active radio button icon */
+.ui-page-theme-a .ui-radio-on:after,
+html .ui-bar-a .ui-radio-on:after,
+html .ui-body-a .ui-radio-on:after,
+html body .ui-group-theme-a .ui-radio-on:after,
+.ui-btn.ui-radio-on.ui-btn-a:after {
+	border-color: #3388cc /*{a-active-background-color}*/;
+}
+/* Focus */
+.ui-page-theme-a .ui-btn:focus,
+html .ui-bar-a .ui-btn:focus,
+html .ui-body-a .ui-btn:focus,
+html body .ui-group-theme-a .ui-btn:focus,
+html head + body .ui-btn.ui-btn-a:focus,
+/* Focus buttons and text inputs with div wrap */
+.ui-page-theme-a .ui-focus,
+html .ui-bar-a .ui-focus,
+html .ui-body-a .ui-focus,
+html body .ui-group-theme-a .ui-focus,
+html head + body .ui-btn-a.ui-focus,
+html head + body .ui-body-a.ui-focus {
+	-webkit-box-shadow: 0 0 12px #3388cc /*{a-active-background-color}*/;
+	-moz-box-shadow: 0 0 12px #3388cc /*{a-active-background-color}*/;
+	box-shadow: 0 0 12px #3388cc /*{a-active-background-color}*/;
+}
+
+
+
+
+
+
+
+/* Links */
+.ui-page-theme-b a,
+html .ui-bar-b a,
+html .ui-body-b a,
+html body .ui-group-theme-b a {
+	color: #3388cc /*{b-link-color}*/;
+	font-weight: bold;
+}
+.ui-page-theme-b a:visited,
+html .ui-bar-b a:visited,
+html .ui-body-b a:visited,
+html body .ui-group-theme-b a:visited {
+    color: #3388cc /*{b-link-visited}*/;
+}
+.ui-page-theme-b a:hover,
+html .ui-bar-b a:hover,
+html .ui-body-b a:hover,
+html body .ui-group-theme-b a:hover {
+	color: #005599 /*{b-link-hover}*/;
+}
+.ui-page-theme-b a:active,
+html .ui-bar-b a:active,
+html .ui-body-b a:active,
+html body .ui-group-theme-b a:active {
+	color: #005599 /*{b-link-active}*/;
+}
+/* Button up */
+.ui-page-theme-b .ui-btn,
+html .ui-bar-b .ui-btn,
+html .ui-body-b .ui-btn,
+html body .ui-group-theme-b .ui-btn,
+html head + body .ui-btn.ui-btn-b,
+/* Button visited */
+.ui-page-theme-b .ui-btn:visited,
+html .ui-bar-b .ui-btn:visited,
+html .ui-body-b .ui-btn:visited,
+html body .ui-group-theme-b .ui-btn:visited,
+html head + body .ui-btn.ui-btn-b:visited {
+	background-color: #a4bff6 /* 5bacdb a4bff6 f6f6f6 orig revdave #5bacdb {b-bup-background-color}*/;
+	border-color: #dddddd /*{b-bup-border}*/;
+	color: #ffffff /*{b-bup-color}*/;
+	text-shadow: 0 /*{b-bup-shadow-x}*/ 1px /* rev{b-bup-shadow-y}*/ 0 /*{b-bup-shadow-radius}*/ #444444 /* f3f3f3{b-bup-shadow-color}*/;
+}
+/* Button hover */
+.ui-page-theme-b .ui-btn:hover,
+html .ui-bar-b .ui-btn:hover,
+html .ui-body-b .ui-btn:hover,
+html body .ui-group-theme-b .ui-btn:hover,
+html head + body .ui-btn.ui-btn-b:hover {
+	background-color: #14065b /* a4bff6 14065b ededed 5bacdb ededed  FF00FF   {b-bhover-background-color}*/;
+	border-color: #dddddd /*{b-bhover-border}*/;
+	color: #ffffff /*{b-bhover-color}*/;
+	text-shadow: 0 /*{b-bhover-shadow-x}*/ 1px /* revdave {b-bhover-shadow-y}*/ 0 /*{b-bhover-shadow-radius}*/ #444444 /*f3f3f3 444444 {b-bhover-shadow-color}*/;
+}
+/* Button down */
+.ui-page-theme-b .ui-btn:active,
+html .ui-bar-b .ui-btn:active,
+html .ui-body-b .ui-btn:active,
+html body .ui-group-theme-b .ui-btn:active,
+html head + body .ui-btn.ui-btn-b:active {
+	background-color: #2fc4FF /*  e8e8e8 {b-bdown-background-color}*/;
+	border-color: #dddddd /*{b-bdown-border}*/;
+	color: #333333 /*{b-bdown-color}*/;
+	text-shadow: 0 /*{b-bdown-shadow-x}*/ 1px /*{b-bdown-shadow-y}*/ 0 /*{b-bdown-shadow-radius}*/ #f3f3f3 /*{b-bdown-shadow-color}*/;
+}
+/* Active button */
+.ui-page-theme-b .ui-btn.ui-btn-active,
+html .ui-bar-b .ui-btn.ui-btn-active,
+html .ui-body-b .ui-btn.ui-btn-active,
+html body .ui-group-theme-b .ui-btn.ui-btn-active,
+html head + body .ui-btn.ui-btn-b.ui-btn-active,
+/* Active checkbox icon */
+.ui-page-theme-b .ui-checkbox-on:after,
+html .ui-bar-b .ui-checkbox-on:after,
+html .ui-body-b .ui-checkbox-on:after,
+html body .ui-group-theme-b .ui-checkbox-on:after,
+.ui-btn.ui-checkbox-on.ui-btn-b:after,
+/* Active flipswitch background */
+.ui-page-theme-b .ui-flipswitch-active,
+html .ui-bar-b .ui-flipswitch-active,
+html .ui-body-b .ui-flipswitch-active,
+html body .ui-group-theme-b .ui-flipswitch-active,
+html body .ui-flipswitch.ui-bar-b.ui-flipswitch-active,
+/* Active slider track */
+.ui-page-theme-b .ui-slider-track .ui-btn-active,
+html .ui-bar-b .ui-slider-track .ui-btn-active,
+html .ui-body-b .ui-slider-track .ui-btn-active,
+html body .ui-group-theme-b .ui-slider-track .ui-btn-active,
+html body div.ui-slider-track.ui-body-b .ui-btn-active {
+	background-color: #3388cc /*{b-active-background-color}*/;
+	border-color: #3388cc /*{b-active-border}*/;
+	color: #ffffff /*{b-active-color}*/;
+	text-shadow: 0 /*{b-active-shadow-x}*/ 1px /*{b-active-shadow-y}*/ 0 /*{b-active-shadow-radius}*/ #005599 /*{b-active-shadow-color}*/;
+}
+/* Active radio button icon */
+.ui-page-theme-b .ui-radio-on:after,
+html .ui-bar-b .ui-radio-on:after,
+html .ui-body-b .ui-radio-on:after,
+html body .ui-group-theme-b .ui-radio-on:after,
+.ui-btn.ui-radio-on.ui-btn-b:after {
+	border-color: #3388cc /*{b-active-background-color}*/;
+}
+/* Focus */
+.ui-page-theme-b .ui-btn:focus,
+html .ui-bar-b .ui-btn:focus,
+html .ui-body-b .ui-btn:focus,
+html body .ui-group-theme-b .ui-btn:focus,
+html head + body .ui-btn.ui-btn-b:focus,
+/* Focus buttons and text inputs with div wrap */
+.ui-page-theme-b .ui-focus,
+html .ui-bar-b .ui-focus,
+html .ui-body-b .ui-focus,
+html body .ui-group-theme-b .ui-focus,
+html head + body .ui-btn-b.ui-focus,
+html head + body .ui-body-b.ui-focus {
+	-webkit-box-shadow: 0 0 12px #3388cc /*{b-active-background-color}*/;
+	-moz-box-shadow: 0 0 12px #3388cc /*{b-active-background-color}*/;
+	box-shadow: 0 0 12px #3388cc /*{b-active-background-color}*/;
+}
+
+
+</style>
+
+<!--background: #65a9d7; B6E5FF  a4bff6 -->
+
+
+<link href="mob.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<section id="page01" data-role="page" data-cache="never">
+
+<div data-role="header" data-position="fixed" data-theme="a">
+<div class="box1 boxblue"> <img class="center" src="pics/appbanner-320x60-main.png" ></div>
+
+<!--<h1>Page head Title</h1> --> 
+</div>
+<!-- /header -->
+
+<div role="main" class="ui-content">
+<div class="content" >
+<div class="box1 center1" > 
+
+<!--INSERT START -->
+
+<table width="99%" border="0" align="center" cellpadding="2" cellspacing="2" >
+
+
+<tr>
+<td colspan="3" align="center">
+
+<span class="print_data_20">
+
+<strong>
+ <span id="Company"></span>
+
+
+</strong> <span class="print_data_14"> ID: </span><strong>
+ <span id="Client_ID"></span>
+</strong></span>
+
+<!--pree <span id="pre_emp_completecheck"></span> -->
+
+
+</td>
+</tr>
+
+
+<tr>
+<td colspan="3" align="center">
+
+<div class="widebox95">
+<div data-role="controlgroup" data-type="vertical">
+
+
+<div id="pre_emp_completecheck">
+<a class="ui-btn ui-btn-c tsize1" href="collection-sites1.html" rel="external">YOU NEED A PRE EMP TEST !!!</a>
+</div>
+
+<div id="rt_completecheck">
+<a class="ui-btn ui-btn-c tsize1" href="collection-sites1.html" rel="external">YOU NEED A TEST !!!</a>
+</div>
+
+<a rel="external" class="ui-btn ui-btn-a tsize2" href="certificate_new1.html">Certificate Of Drug &amp;<br>Alcohol Program Enrollment
+</a>
+
+<!--this was test-results.html but too many issues put bak later
+<a class="ui-btn  ui-btn-b tsize1" href="test-results.html" rel="external">Last Drug<br>
+Test Results</a>
+
+ -->
+ 
+ <a class="ui-btn  ui-btn-b tsize1" href="get-last-test.html" rel="external">Last Drug<br>
+Test Results</a>
+
+<a class="ui-btn ui-btn-a tsize1" href="collection-sites1.html" rel="external">Drug And Alcohol Testing<br>
+Collection Sites</a>
+ 
+
+<a class="ui-btn  ui-btn-b tsize1" href="contractor-contact-info.html" rel="external">Who May See<br>
+Test Results</a>
+
+<a href="drug-education.html" class="ui-btn  ui-btn-a tsize1" rel="external">IDC Drug-Alcohol<br>
+Program Rules</a>
+
+
+
+<a  href="client-contact-info.html" class="ui-btn  ui-btn-b tsize1" rel="external">My Contact Info</a>
+
+
+<a  href="client-testing.html" class="ui-btn ui-btn-a tsize1" rel="external">Collector Notice</a>
+
+
+<!--invoices-list.html -->
+<a href="invoices-list-fr.html" class="ui-btn ui-btn-b tsize1" rel="external">Make A Payment</a>
+
+
+
+<a href="accident-definition.html" class="ui-btn ui-btn-a tsize1" rel="external">Motor Carrier<br>
+Definition Of Accident</a>
+
+<a href="random-tests.html" class="ui-btn ui-btn-b tsize1" rel="external">Random Tests</a>
+
+
+<a href="login-update.html" class="ui-btn ui-btn-a tsize1" rel="external">Update My Info</a>
+
+<a  href="logout.html" class="ui-btn  ui-btn-b tsize1" rel="external">Log Out</a>
+
+<a href="random-tests-completecheck.html" class="ui-btn ui-btn-a tsize1" rel="external">Random Test Checker</a>
+
+<a href="pre-emp-completecheck.html" class="ui-btn ui-btn-b tsize1" rel="external">Pre-Employment Test Checker</a>
+<!--
+<a href="get-last-test.html" class="ui-btn ui-btn-a tsize1" rel="external">Get Last Test</a> -->
+
+<br>
+<!--
+tmp<br>
+
+<a class="ui-btn  ui-btn-b tsize1" href="index-tmp.html" rel="external">dev</a>
+ -->
+
+
+</div>
+
+
+
+</td>
+</tr>
+
+<tr>
+<td colspan="3" align="center">
+<span class="print_data_20">Need Help? 800-243-7669<br />
+Or <a href="mailto:support@idcapp.com">Click Here To Email Us</a><br />
+
+</span>
+
+<br>
+<span class="print_data_14">Independent Drivers Consortium
+
+&#169; 2015</span>
+
+
+
+<!-- <br><br> v1.2.9 -->
+
+<!-- <a rel="external" href="index-tmp.html">x</a> -->
+
+<br>
+
+Last Login: <span id="date_lastlogin_ap" ></span>
+<br>
+
+<span id="updateinfo" class="big18"></span>
+
+
+
+<script>
+
+var date_format = '12'; /* FORMAT CAN BE 12 hour (12) OR 24 hour (24)*/
+
+var d = new Date(localStorage.getItem("date_lastlogin"));
+
+var hour    = d.getHours();  /* Returns the hour (from 0-23) */
+var minutes = d.getMinutes();  /* Returns the minutes (from 0-59) */
+var result  = hour;
+var ext     = '';
+
+if(date_format == '12'){
+    if(hour > 12){
+        ext = 'PM';
+        hour = (hour - 12);
+
+        if(hour < 10){
+            result = "0" + hour;
+        }else if(hour == 12){
+            hour = "00";
+            ext = 'AM';
+        }
+    }
+    else if(hour < 12){
+        result = ((hour < 10) ? "0" + hour : hour);
+        ext = 'AM';
+    }else if(hour == 12){
+        ext = 'PM';
+    }
+}
+
+if(minutes < 10){
+    minutes = "0" + minutes; 
+}
+
+result = result + ":" + minutes + ' ' + ext; 
+//console.log(result);
+document.getElementById('date_lastlogin_ap').textContent = result;
+
+</script>
+
+<script>
+//document.getElementById('date_lastlogin').textContent = localStorage.getItem("date_lastlogin");
+</script>
+
+</td>
+</tr>
+<tr>
+<td colspan="3" align="center">
+
+
+
+     
+     </td>
+</tr>
+</table>
+
+
+
+<script>
+document.getElementById('Client_ID').textContent = localStorage.getItem("Client_ID");
+document.getElementById('Company').textContent = localStorage.getItem("Company");
+
+//document.getElementById('pre_emp_completecheck').textContent = localStorage.getItem("pre_emp_completecheck");
+
+
+//document.getElementById('rt_completecheck').textContent = localStorage.getItem("rt_completecheck");
+	
+</script>
+
+
+<script>
+$(document).ready(function(){
+
+if (localStorage.getItem("pre_emp_completecheck").trim() == "foundzero")
+{
+$("#pre_emp_completecheck").hide(1);
+$("#pre_emp_completecheck").show(2000);
+}else{
+$("#pre_emp_completecheck").hide();
+}	
+	
+});
+</script>
+
+
+<script>
+$(document).ready(function(){
+
+// YO THERE IS EXTRA CRAP IN  rt_completecheck so needs trim - wazzup?
+
+if (localStorage.getItem("rt_completecheck").trim() == "yestest")
+
+{
+$("#rt_completecheck").hide(1);
+$("#rt_completecheck").show(2000);
+}else{
+$("#rt_completecheck").hide();
+}
+
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+//login update check by timer
+var today = new Date();
+localStorage.setItem('today', today);
+var date_lastlogin = new Date(localStorage.getItem("date_lastlogin"));
+var diff =  today - date_lastlogin;
+//var days = diff / 1000 / 60 / 60 / 24;
+//var hours = diff / 1000 / 60 / 60 ;
+var minutes = diff / 1000 / 60  ;
+
+if ( minutes < 15)
+{
+document.getElementById('updateinfo').textContent = 'Your Info is Current';	
+//alert("min less 5");
+}
+else if (minutes > 15) {
+
+document.getElementById('updateinfo').textContent = 'Updating Your Data';
+	
+//alert("min over 5");
+//
+window.location.replace("login-update.html");	
+}else {
+
+}
+
+</script>
+
+
+<!--INSERT END --> 
+
+</div>
+<!-- end .box --> 
+
+<!-- end .content --></div>
+</div>
+<!-- /ui-content -->
+
+<footer data-role="footer" class="ui-barNAH" data-position="fixed" data-theme="a">
+<div class="ui-grid-c boxblue">
+
+<!--foot -->
+
+
+</div>
+</footer>
+
+
+<!-- /footer --> 
+
+</section>
+<!-- /page -->
+
+</body>
+</html>

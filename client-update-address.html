@@ -1,0 +1,402 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Independent Drivers Consortium - Reg 1</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+
+
+<link rel="stylesheet" href="inc/jq/themes/theme-02.min.css" />
+<link rel="stylesheet" href="inc/jq/themes/jquery.mobile.icons.min.css" />
+
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+ <script>
+	$(function(){
+		$( "[data-role='header'], [data-role='footer']" ).toolbar();
+		});
+    </script>
+
+<script src="inc/jq/validate/dist/jquery.validate.js"></script>
+
+
+<link href="mob.css" rel="stylesheet" type="text/css" />
+
+
+
+<style type="text/css">
+
+input999
+{
+	-moz-border-radius: 11px;
+	border-radius: 11px;
+	border: 1px solid #CCC;
+	padding: .2em;
+ 	margin: .2em 0;
+	
+}
+
+.label_16g999 {
+	color: #999999;
+	font-size: 16px;
+}
+
+.big24999 {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #FFF;
+	background-color: #6290ee;
+	font-size: 24px;
+}
+
+</style>
+
+
+  
+</head>
+<body>
+
+<div data-role="header" data-position="fixed" data-theme="a">
+
+
+
+<div class="box1 center1 boxblue" >
+<a href="dashboard.html" rel="external"><img src="pics/appbanner-320x60-home1.png" width="320" height="61" class="center" ></a>
+</div>
+
+
+
+<!--<h1>Page head Title</h1> -->
+</div><!-- /header -->
+
+<section id="page1" data-role="page">
+
+
+<div role="main" class="ui-content">
+<div class="content" >
+<div class="box1 center1" >
+  
+      
+<!--INSERT START -->
+
+<a rel="external" href="client-update.html" class="buttonlink2 center1">Back to Update Index</a> <br>
+
+
+
+<form action="" method="post" name="thisform" id="thisform" >
+
+
+
+
+<table border="0" align="center" cellpadding="2" cellspacing="2">
+  <tr>
+    <td>
+   
+    
+     <h1> <span class="red1"> <strong>
+	
+    
+    
+
+  <!-- where the response will be displayed -->
+<div id='response'></div>
+  
+     
+     </strong></span>
+     
+     
+ </h1>
+    
+    
+    
+    
+    </td>
+  </tr>
+  
+  
+  
+  
+<tr align="left" valign="top">
+<td align="left">
+
+
+<div data-role="ui-field-contain">
+<label class="label_16g" for="Billing_Address"><span class="red2">*</span> Address:</label>
+
+<input name="Billing_Address" id="Billing_Address" type="text" class="print_data_22" value="" required minlength="1" />
+</div>
+
+
+
+</td>
+</tr>
+  
+  
+ 
+<tr align="left" valign="top">
+<td align="left">
+
+
+
+<div data-role="ui-field-contain">
+<label class="label_16g" for="Billing_City"><span class="red2">*</span> City:</label>
+
+<input name="Billing_City" id="Billing_City" type="text" class="print_data_22" value=""  required minlength="1" />
+</div>
+
+
+
+</td>
+</tr>
+
+ 
+ 
+
+<tr align="left" valign="top">
+<td align="left">
+
+<div data-role="ui-field-contain">
+</div>
+
+<label class="label_16g" for="Billing_State"><span class="red2">*</span> State:</label>
+
+
+<!--<OPTION SELECTED VALUE="CA">California</option> -->
+
+<span class="print_data_22">
+<select name="Billing_State" required class="print_data_22">
+
+<OPTION SELECTED VALUE=""></option>
+<option value="AL">Alabama</option>
+<option value="AK">Alaska</option>
+<option value="AZ">Arizona</option>
+<option value="AR">Arkansas</option>
+<option value="CA">California</option>
+<option value="CO">Colorado</option>
+<option value="CT">Connecticut</option>
+<option value="DE">Delaware</option>
+<option value="DC">District of Columbia</option>
+<option value="FL">Florida</option>
+<option value="GA">Georgia</option>
+<option value="HI">Hawaii</option>
+<option value="ID">Idaho</option>
+<option value="IL">Illinois</option>
+<option value="IN">Indiana</option>
+<option value="IA">Iowa</option>
+<option value="KS">Kansas</option>
+<option value="KY">Kentucky</option>
+<option value="LA">Louisiana</option>
+<option value="ME">Maine</option>
+<option value="MD">Maryland</option>
+<option value="MA">Massachusetts</option>
+<option value="MI">Michigan</option>
+<option value="MN">Minnesota</option>
+<option value="MS">Mississippi</option>
+<option value="MO">Missouri</option>
+<option value="MT">Montana</option>
+<option value="NE">Nebraska</option>
+<option value="NV">Nevada</option>
+<option value="NH">New Hampshire</option>
+<option value="NJ">New Jersey</option>
+<option value="NM">New Mexico</option>
+<option value="NY">New York</option>
+<option value="NC">North Carolina</option>
+<option value="ND">North Dakota</option>
+<option value="OH">Ohio</option>
+<option value="OK">Oklahoma</option>
+<option value="OR">Oregon</option>
+<option value="PA">Pennsylvania</option>
+<option value="RI">Rhode Island</option>
+<option value="SC">South Carolina</option>
+<option value="SD">South Dakota</option>
+<option value="TN">Tennessee</option>
+<option value="TX">Texas</option>
+<option value="UT">Utah</option>
+<option value="VT">Vermont</option>
+<option value="VA">Virginia</option>
+<option value="WA">Washington</option>
+<option value="WV">West Virginia</option>
+<option value="WI">Wisconsin</option>
+<option value="WY">Wyoming</option>
+<option value="AA">Armed Forces Americas</option>
+<option value="AE">Armed Forces Europe</option>
+<option value="AP">Armed Forces Pacific
+</SELECT>
+</select>
+</span>
+
+
+
+
+</td>
+</tr>
+
+<tr align="left" valign="top">
+<td align="left">
+
+
+<div data-role="ui-field-contain">
+<label class="label_16g" for="Billing_Zip"><span class="red2">*</span> Zip:</label>
+
+<input name="Billing_Zip" id="Billing_Zip" type="text" class="print_data_22" value=""  required minlength="1" />
+</div>
+
+
+</td>
+</tr>
+
+   <tr>
+    <td align="left" valign="top">
+  <input data-role="submit" type="submit" value=" - Update - ">
+
+      
+       </td>
+    </tr>
+  
+  
+  
+  <tr>
+    <td>
+    
+
+      
+</td>
+  </tr>
+  
+</table>
+
+
+</form>
+
+
+
+<script>
+
+$("#page1").on("pageinit", function() {
+        //alert ("test1");
+		
+        $("form").validate({
+            
+rules: {
+                Client_ID99: {
+                    required: true
+                },
+                webpass99: {
+                    required: true
+                }
+            },
+            errorPlacement: function(error, element) {
+                error.insertBefore(element.parent());
+
+                //alert ("test2");
+            },
+			
+submitHandler: function(form) {
+        //code that should happen after validation if no errors are found goes here
+        
+//alert ("success");
+
+localStorage.setItem("done1", "YO12221");
+
+localStorage.setItem("Billing_Address", form.Billing_Address.value);
+localStorage.setItem("Billing_City", form.Billing_City.value);
+localStorage.setItem("Billing_State", form.Billing_State.value);
+localStorage.setItem("Billing_Zip", form.Billing_Zip.value);
+
+
+localStorage.setItem("Address", form.Billing_Address.value);
+localStorage.setItem("City", form.Billing_City.value);
+localStorage.setItem("State", form.Billing_State.value);
+localStorage.setItem("Zip", form.Billing_Zip.value);
+
+//window.location.replace("new-client-application-register3.html");
+		
+	
+	
+// NOW POST	
+
+// show that something is loading
+		$('#response').html("<b>Updating your info...</b>");
+		
+		/*
+		 * 'post_receiver.php' - where you will pass the form data
+		 * $(this).serialize() - to easily read form data
+		 * function(data){... - data contains the response from post_receiver.php
+		 */
+	
+$.post('https://idcapp.com/app-data/client-update-address.php', {	
+
+Client_ID: localStorage.getItem("Client_ID"),
+
+Billing_Address: localStorage.getItem("Billing_Address"),
+Billing_City: localStorage.getItem("Billing_City"),
+Billing_State: localStorage.getItem("Billing_State"),
+Billing_Zip: localStorage.getItem("Billing_Zip"),
+	
+		
+}, function(data){
+			
+			// show the response
+			$('#response').html(data);
+			
+			//$('#response2').html(data);
+window.location.replace("client-contact-info.html");
+			
+		}).fail(function() {
+		
+			// just in case posting your form failed
+			alert( "Posting failed." );
+			
+		});
+
+		// to prevent refreshing the whole page page
+		return false;	
+		        
+ },
+	
+});
+ 
+}
+
+);
+
+</script>
+
+
+
+<script>
+//pre populate
+
+document.thisform.Billing_Address.value=localStorage.getItem("Billing_Address");
+document.thisform.Billing_City.value=localStorage.getItem("Billing_City");
+document.thisform.Billing_State.value=localStorage.getItem("Billing_State");
+document.thisform.Billing_Zip.value=localStorage.getItem("Billing_Zip");
+
+</script>
+
+
+
+
+
+<!--INSERT END -->
+
+</div><!-- end .box -->
+</div><!-- end .content -->
+</div><!-- /ui-content -->
+  
+</section><!-- /page -->
+<!--
+<footer data-role="footer" class="ui-barNAH" data-position="fixed" data-theme="a">
+<div class="ui-grid-c boxblue">
+foot
+</div>
+</footer> -->
+
+<!-- /footer -->
+
+</body>
+</html>

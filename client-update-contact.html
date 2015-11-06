@@ -1,0 +1,399 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Independent Drivers Consortium - Reg 1</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+<link rel="stylesheet" href="inc/jq/themes/theme-02.min.css" />
+<link rel="stylesheet" href="inc/jq/themes/jquery.mobile.icons.min.css" />
+
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+ <script>
+	$(function(){
+		$( "[data-role='header'], [data-role='footer']" ).toolbar();
+		});
+    </script>
+
+<script src="inc/jq/validate/dist/jquery.validate.js"></script>
+
+<link href="mob.css" rel="stylesheet" type="text/css" />
+
+
+
+
+<style type="text/css">
+
+input999
+{
+	-moz-border-radius: 11px;
+	border-radius: 11px;
+	border: 1px solid #CCC;
+	padding: .2em;
+ 	margin: .2em 0;
+	
+}
+
+.label_16g999 {
+	color: #999999;
+	font-size: 16px;
+}
+
+.big24999 {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #FFF;
+	background-color: #6290ee;
+	font-size: 24px;
+}
+
+</style>
+
+
+  
+</head>
+<body>
+
+<div data-role="header" data-position="fixed" data-theme="a">
+
+
+
+<div class="box1 center1 boxblue" >
+<a href="dashboard.html" rel="external"><img src="pics/appbanner-320x60-home1.png" width="320" height="61" class="center" ></a>
+</div>
+
+
+
+<!--<h1>Page head Title</h1> -->
+</div><!-- /header -->
+
+<section id="page1" data-role="page">
+
+<div role="main" class="ui-content">
+<div class="content" >
+<div class="box1 center1" >
+  
+      
+<!--INSERT START -->
+
+<a rel="external" href="client-update.html" class="buttonlink2 center1">Back to Update Index</a> <br>
+  
+<form action="" method="post" name="thisform" id="thisform" >
+
+<table border="0" align="center" cellpadding="2" cellspacing="2">
+  <tr>
+    <td>
+
+<h1> <span class="red1"> <strong>
+
+  <!-- where the response will be displayed -->
+<div id='response'></div>
+  
+     
+     </strong></span>
+     
+     
+ </h1>
+    
+    
+    
+    
+    </td>
+  </tr>
+  <tr>
+    <td align="left" valign="top">
+    
+ 
+      <div data-role="ui-field-contain">
+<label class="label_16g" for="cl_emp_First"><span class="red2">*</span> First Name:</label>
+
+<input name="cl_emp_First" id="cl_emp_First" type="text" class="print_data_22" value=""  required minlength="1" />
+</div>
+      
+      
+      
+      
+      
+      </td>
+  </tr>
+  
+  <tr>
+    <td align="left" valign="top">
+    
+ 
+
+
+
+<div data-role="ui-field-contain">
+<label class="label_16g" for="cl_emp_Last"><span class="red2">*</span> Last Name:</label>
+
+
+<input id="cl_emp_Last" name="cl_emp_Last" type="text" class="print_data_22" value="" required minlength="2">
+</div>
+</td>
+  </tr>
+  
+ <!-- 
+   <tr>
+    <td align="left" valign="top">
+    
+    
+    
+
+
+<div data-role="ui-field-contain">
+<label class="label_16g" for="cl_emp_Social_Security"><span class="red2">*</span> Social Security Number:</label>
+
+<input name="cl_emp_Social_Security" id="cl_emp_Social_Security" type="text" class="print_data_22" value=""  required minlength="1" />
+</div>
+ 
+ 
+ 
+ 
+</td>
+  </tr>
+  
+    -->
+  
+  
+ 
+  
+  
+  <tr>
+    <td align="left" valign="top">
+  
+
+
+<div data-role="ui-field-contain">
+<label class="label_16g" for="cl_emp_Notify_PhoneText"><span class="red2">*</span> Cellphone:</label>
+
+<input name="cl_emp_Notify_PhoneText" id="cl_emp_Notify_PhoneText" type="text" class="print_data_22" value=""  required minlength="1" />
+
+</td>
+  </tr>
+  
+ <!-- 
+<tr align="left" valign="top">
+     <td align="left">
+     
+   
+ 
+ 
+ <div data-role="ui-field-contain">
+<label class="label_16g" for="cl_emp_Drivers_License_No"><span class="red2">*</span> Driver's License Number:</label>
+
+<input name="cl_emp_Drivers_License_No" id="cl_emp_Drivers_License_No" type="text" class="print_data_22" value=""  required minlength="5" />
+</div> 
+ 
+ 
+ 
+ 
+ </td>
+  </tr> 
+
+    -->
+<tr align="left" valign="top">
+     <td align="left">
+     
+   
+ 
+ 
+ <div data-role="ui-field-contain">
+<label class="label_16g" for="email"><span class="red2">*</span> Email Address:</label>
+
+<input name="cl_emp_Notify_Email" id="cl_emp_Notify_Email" type="email" class="print_data_22" value=""  required minlength="1" />
+</div>
+
+
+</td>
+ 
+  </tr>  
+  
+ 
+ 
+   <tr>
+    <td align="left" valign="top">
+<input data-role="submit" type="submit" value=" - Update - ">
+
+       </td>
+    </tr>
+  
+  
+  
+  <tr>
+    <td>
+    
+    
+  
+</td>
+  </tr>
+  
+</table>
+
+
+</form>
+
+
+
+
+
+<script>
+
+$("#page1").on("pageinit", function() {
+        //alert ("test1");
+		
+        $("form").validate({
+            
+rules: {
+                Client_ID99: {
+                    required: true
+                },
+                webpass99: {
+                    required: true
+                }
+            },
+            errorPlacement: function(error, element) {
+                error.insertAfter(element.parent());
+
+                //alert ("test2");
+            },
+			
+submitHandler: function(form) {
+        //code that should happen after validation if no errors are found goes here
+        
+//alert ("success");
+
+localStorage.setItem("done1", "YO12221");
+localStorage.setItem("cl_emp_First", form.cl_emp_First.value);
+localStorage.setItem("cl_emp_Last", form.cl_emp_Last.value);
+localStorage.setItem("Contact_First", form.cl_emp_First.value);
+localStorage.setItem("Contact_Last", form.cl_emp_Last.value);
+localStorage.setItem("F_Name_Billing", form.cl_emp_First.value);
+localStorage.setItem("L_Name_Billing", form.cl_emp_Last.value);
+localStorage.setItem("Company", form.cl_emp_First.value +" "+ form.cl_emp_Last.value);
+localStorage.setItem("Billing_Company_Name", form.cl_emp_First.value +" "+ form.cl_emp_Last.value);
+
+
+localStorage.setItem("cl_emp_Notify_PhoneText", form.cl_emp_Notify_PhoneText.value);
+
+localStorage.setItem("cl_emp_Notify_PhoneVoice", form.cl_emp_Notify_PhoneText.value);
+localStorage.setItem("Billing_Phone", form.cl_emp_Notify_PhoneText.value);
+
+localStorage.setItem("Phone2", form.cl_emp_Notify_PhoneText.value);
+
+// MAKE localStorage.setItem("cl_emp_telephone", form.cl_emp_Notify_PhoneText.value);
+
+
+localStorage.setItem("cl_emp_Notify_Email", form.cl_emp_Notify_Email.value);
+
+localStorage.setItem("email_Confidential_Email", form.cl_emp_Notify_Email.value);
+
+localStorage.setItem("email_Billing_Address", form.cl_emp_Notify_Email.value);
+
+
+//client_E_Mail?
+
+
+
+//localStorage.setItem("cl_emp_Social_Security", form.cl_emp_Social_Security.value);
+//localStorage.setItem("cl_emp_Drivers_License_No", form.cl_emp_Drivers_License_No.value);
+
+//localStorage.setItem("PUC_Number", form.PUC_Number.value);
+
+
+//window.location.replace("new-client-application-register3.html");
+
+// show that something is loading
+		$('#response').html("<b>Updating your info...</b>");
+		
+		/*
+		 * 'post_receiver.php' - where you will pass the form data
+		 * $(this).serialize() - to easily read form data
+		 * function(data){... - data contains the response from post_receiver.php
+		 */ 
+$.post('https://idcapp.com/app-data/client-update-contact.php', {			 
+
+Client_ID: localStorage.getItem("Client_ID"),
+cl_emp_First: localStorage.getItem("cl_emp_First"),
+cl_emp_Last: localStorage.getItem("cl_emp_Last"),
+cl_emp_Notify_PhoneText: localStorage.getItem("cl_emp_Notify_PhoneText"),
+cl_emp_Notify_Email: localStorage.getItem("cl_emp_Notify_Email"),
+
+// no ss or dl or puc
+//cl_emp_Social_Security: localStorage.getItem("cl_emp_Social_Security"),
+//cl_emp_Drivers_License_No: localStorage.getItem("cl_emp_Drivers_License_No"),
+//PUC_Number: localStorage.getItem("PUC_Number")	
+		
+}, function(data){
+			
+			// show the response
+			$('#response').html(data);
+			
+			//$('#response2').html(data);
+			
+			window.location.replace("client-contact-info.html");
+		
+		}).fail(function() {
+		
+			// just in case posting your form failed
+			alert( "Posting failed." );
+			
+		});
+
+		// to prevent refreshing the whole page page
+		return false;	
+		        
+ },
+	
+});
+ 
+}
+
+);
+
+</script>
+
+
+
+<script>
+//pre populate
+
+
+//document.thisform.Client_ID.value=localStorage.getItem("Client_ID");
+
+document.thisform.cl_emp_First.value=localStorage.getItem("cl_emp_First");
+document.thisform.cl_emp_Last.value=localStorage.getItem("cl_emp_Last");
+//document.thisform.PUC_Number.value=localStorage.getItem("PUC_Number");
+document.thisform.cl_emp_Notify_PhoneText.value=localStorage.getItem("cl_emp_Notify_PhoneText");
+document.thisform.cl_emp_Notify_Email.value=localStorage.getItem("cl_emp_Notify_Email");
+//document.thisform.cl_emp_Social_Security.value=localStorage.getItem("cl_emp_Social_Security");
+//document.thisform.cl_emp_Drivers_License_No.value=localStorage.getItem("cl_emp_Drivers_License_No");
+
+
+</script>
+
+
+<br>
+
+<!--INSERT END -->
+
+</div><!-- end .box -->
+</div><!-- end .content -->
+</div><!-- /ui-content -->
+  
+</section><!-- /page -->
+<!--
+<footer data-role="footer" class="ui-barNAH" data-position="fixed" data-theme="a">
+<div class="ui-grid-c boxblue">
+foot
+</div>
+</footer> -->
+
+<!-- /footer -->
+
+</body>
+</html>

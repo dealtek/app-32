@@ -1,0 +1,165 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>new client payment</title>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+<link rel="stylesheet" href="inc/jq/themes/theme-02.min.css" />
+<link rel="stylesheet" href="inc/jq/themes/jquery.mobile.icons.min.css" />
+
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+<!--<script>
+	$(function(){
+		$( "[data-role='header'], [data-role='footer']" ).toolbar();
+		});
+    </script> -->
+
+<link href="mob.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+</style>
+
+
+
+
+
+</head>
+
+<body>
+
+
+ 
+<!--<div class="widebox1"></div> -->
+<!--<div class="dash1"><a rel="external" class="buttonlink2" href="index-tmp.html">index temp</a></div> -->
+
+
+
+<div class="box1 center1 boxblue" >
+<a href="dashboard.html" rel="external"><img src="pics/appbanner-320x60-home1.png" width="320" height="61" class="center" ></a>
+</div>
+<!--
+<div class="print_data_22"  >
+Client_ID2 is  
+<span id='Client_ID2' </span>
+</div> -->
+
+
+
+
+ <!--
+  
+ 
+new CLID is <span class="print_data_22"  id='Client_ID'></span> -->
+<!--
+Client_ID2 is  <div class="print_data_22"  id='Client_ID2'></div>
+
+new theid2 is <div class="print_data_22"  id='id6'></div>
+
+
+
+invoices-list
+var goto = "https://idcapp.com/app-data/pay/new-client-application-payment.php?Client_ID=";
+
+
+quickpay-log-inc.php
+
+var goto = "https://idcapp.com/app-data/pay/invoices-list.php?Client_ID=";
+
+
+ -->
+
+<script>
+
+//
+var goto = "https://idcapp.com/app-data/pay/quickpay-log.php?pg=2&Client_ID=";
+
+//var goto = "https://idcapp.com/app-data/pay/quickpay-log.php?Client_ID=";
+
+var theid = localStorage.getItem("Client_ID");
+var theid2 = localStorage.getItem("Client_ID");
+
+//var theid33 = '45021';
+
+//var more = "mobileapp/";
+var x = document.createElement("IFRAME");
+    //x.setAttribute("src", "https://idcapp.com/" + more);
+	x.setAttribute("src", goto + theid);
+	x.style.width = 100+"%";
+	//x.style.height = 80+"%";
+	//x.style.height = 480+"px";
+	x.style.height = 550+"px";  // hmm how do 100% what is best num
+document.body.appendChild(x);
+</script>
+ 
+ 
+ <!-- this was real one
+<iframe src="https://idcapp.com/app-data/pay/new-client-application-payment.php?Client_ID=45450" width="100%" height="450" frameborder="0" border="0" cellspacing="0" style="background:#fff;" scrolling="auto"></iframe>
+
+ --> 
+
+<script>
+// don't need all these just for test
+//document.getElementById('Client_ID').textContent = localStorage.getItem("Client_ID");
+//document.getElementById('Client_ID2').textContent = localStorage.getItem("Client_ID");
+//document.getElementById('id6').textContent = theid2;
+</script>
+
+
+
+<!--
+<footer data-role="footer" class="ui-barNAH" data-position="fixed" data-theme="a">
+
+</footer>
+
+ -->
+
+
+
+
+<!-- code for including header/footer -->
+    <script type="text/javascript">
+      
+     /* 
+	  
+	  // we're ready, include away
+      $(window).ready(function(){
+        
+        // use easy AJAX jQuery helpers
+        
+		// head no work!!!!
+        // add header.html into <header>
+        $.get("header-inc.html", function(fileData){
+          $('header').html(fileData); 
+        });
+        
+		
+		
+        // add footer.html into <footer>
+        $.get("footer-inc.html", function(fileData){
+          $('footer').html(fileData); 
+        });
+       
+	 
+	   
+	   
+      });
+      */
+    </script>
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Independent Drivers Consortium Title</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+
+<link rel="stylesheet" href="inc/jq/themes/theme-02.min.css" />
+<link rel="stylesheet" href="inc/jq/themes/jquery.mobile.icons.min.css" />
+
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+<script>
+	$(function(){
+		$( "[data-role='header'], [data-role='footer']" ).toolbar();
+		});
+    </script>
+
+<link href="mob.css" rel="stylesheet" type="text/css" />
+
+  
+</head>
+<body>
+
+
+<div data-role="header" data-position="fixed" data-theme="a">
+<!--add header -->
+</div>
+
+<!-- /header -->
+
+<section id="page01111" data-role="page">
+
+<div role="main" class="ui-content">
+<div class="content" >
+<div class="box1 center1" >
+  
+      
+<!--INSERT START -->
+
+<span id="updateinfo" class="big22"></span><br><br>
+<script>
+//login update check by timer
+var today = new Date();
+localStorage.setItem('today', today);
+
+var date_lastlogin = new Date(localStorage.getItem("date_lastlogin"));
+
+var diff =  today - date_lastlogin;
+//var days = diff / 1000 / 60 / 60 / 24;
+//var hours = diff / 1000 / 60 / 60 ;
+var minutes = diff / 1000 / 60  ;
+
+/*
+
+document.getElementById('today').textContent = localStorage.getItem("today");
+document.getElementById('lastcheck_test_compare').textContent = lastcheck_test_compare;
+
+
+//document.getElementById('lastcheck_test').textContent = localStorage.getItem("lastcheck_test");
+
+//document.getElementById('lastcheck_test1').textContent = lastcheck_test1;
+
+//document.getElementById('lastcheck_test2').textContent = lastcheck_test2;
+
+
+document.getElementById('diff').textContent = diff;
+
+document.getElementById('days').textContent = days;
+document.getElementById('hours').textContent = hours;
+document.getElementById('minutes').textContent = minutes;
+*/
+
+
+if ( minutes < 1)
+{
+document.getElementById('updateinfo').textContent = 'no need';	
+//alert("min less 2");
+}
+else if (minutes > 1) {
+
+document.getElementById('updateinfo').textContent = 'Updating Your Data';
+	
+//alert("min over 2");
+//
+window.location.replace("login-update.html");	
+}else {
+
+}
+ 
+
+</script>
+
+<!--INSERT END -->
+
+</div><!-- end .box -->
+</div><!-- end .content -->
+</div><!-- /ui-content -->
+  
+</section><!-- /page -->
+
+<footer data-role="footer" class="ui-barNAH" data-position="fixed" data-theme="a">
+<div class="ui-grid-c boxblue">
+<!--add footer -->
+</div>
+</footer>
+
+<!-- /footer -->
+
+</body>
+</html>
