@@ -114,12 +114,23 @@
     <!-- Plugins -->
 	<!-- Core plugins -->
 	
+	<!-- maybe new <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+            id="cordova-plugin-device" version="0.2.3">
+			
+			they say just plain
+			cordova plugin add cordova-plugin-device
+			
+			
+			<gap:plugin name="cordova-plugin-device" source="npm" version="0.2.3"  />
+			 -->
+	
+	
 	<gap:plugin name="cordova-plugin-battery-status" source="npm" />
     <gap:plugin name="cordova-plugin-camera" source="npm" />
     <gap:plugin name="cordova-plugin-media-capture" source="npm" />
     <gap:plugin name="cordova-plugin-console" source="npm" />
     <gap:plugin name="cordova-plugin-contacts" source="npm" />
-    <gap:plugin name="cordova-plugin-device" source="npm" version="0.2.3"  />
+    <gap:plugin name="cordova-plugin-device" source="npm"  />
     <gap:plugin name="cordova-plugin-device-motion" source="npm" />
     <gap:plugin name="cordova-plugin-device-orientation" source="npm" />
     <gap:plugin name="cordova-plugin-dialogs" source="npm" />
